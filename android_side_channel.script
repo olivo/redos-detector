@@ -1,0 +1,16 @@
+export CLASSPATH=~/soot/soot-2.5.0.jar:~/soot/axml-2.0.jar:~/soot/slf4j-api-1.7.5.jar:~/soot/slf4j-simple-1.7.5.jar:~/soot/soot-infoflow-android.jar:~/soot/soot-infoflow.jar:~/soot/soot-trunk.jar:.
+
+javac *.java
+
+#java PerformanceBug -f J -app com.flaptor.hist4j.Cell
+
+
+#FILES=~/java_benchmarks/hist4j/hist4j-master/src/com/flaptor/hist4j/*.java
+#for f in $FILES
+#do
+#	base=`basename $f`
+#	class=${base%\.*}
+#	java PerformanceBug -f J -app "com.flaptor.hist4j.$class"
+#done
+
+java AndroidSideChannel -f J -app -process-dir ~/android_apps/venmo/Venmo_v6.24.1_apkpure.com.apk
