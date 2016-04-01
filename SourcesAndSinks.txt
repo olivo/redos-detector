@@ -345,3 +345,5 @@
 %<java.lang.ProcessBuilder: java.lang.Process start()> -> _SINK_
 
 <java.util.regex.Matcher: boolean matches()> -> _SINK_
+<java.lang.String: boolean matches(java.lang.String)> -> _SINK_
+<com.google.common.base.CharMatcher: boolean matchesAllOf(java.lang.CharSequence)> -> _SINK_
