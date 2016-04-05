@@ -21,6 +21,11 @@ class ReDoSDetector {
 	String apkFileLocation = "benchmarks/com.facebook.katana.apk";
 	boolean forceAndroidJar = false;
 
+	if(args.length > 0) {
+	    apkFileLocation = args[0];
+	}
+
+	System.out.println("Analyzing APK: " + apkFileLocation);
 	SetupApplication app = new SetupApplication(androidJar, apkFileLocation);
 	EasyTaintWrapper easyTaintWrapper = new EasyTaintWrapper(new File("EasyTaintWrapperSource.txt"));
 	app.setTaintWrapper(easyTaintWrapper);
