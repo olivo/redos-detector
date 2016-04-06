@@ -2,6 +2,7 @@ import java.io.File;
 import java.util.ArrayList;
 import soot.jimple.infoflow.android.SetupApplication;
 import soot.jimple.infoflow.android.config.SootConfigForAndroid;
+import soot.jimple.infoflow.android.InfoflowAndroidConfiguration;
 import soot.jimple.infoflow.entryPointCreators.AndroidEntryPointCreator;
 import soot.jimple.infoflow.Infoflow;
 import soot.jimple.infoflow.results.InfoflowResults;
@@ -29,6 +30,11 @@ class ReDoSDetector {
 	SetupApplication app = new SetupApplication(androidJar, apkFileLocation);
 	EasyTaintWrapper easyTaintWrapper = new EasyTaintWrapper(new File("EasyTaintWrapperSource.txt"));
 	app.setTaintWrapper(easyTaintWrapper);
+
+	InfoflowAndroidConfiguration config = app.getConfig();
+	config.setAccessPathLength(1);
+	app.setConfig(config);
+
 	app.calculateSourcesSinksEntrypoints("SourcesAndSinks.txt");
 	app.runInfoflow();
 	
