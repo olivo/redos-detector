@@ -33,6 +33,13 @@ class ReDoSDetector {
 
 	InfoflowAndroidConfiguration config = app.getConfig();
 	config.setAccessPathLength(1);
+	config.setComputeResultPaths(false);
+	config.setEnableCallbacks(false);
+	config.setEnableArraySizeTainting(false);
+	config.setEnableExceptionTracking(false);
+	config.setEnableStaticFieldTracking(false);
+	config.setInspectSinks(false);
+	config.setFlowSensitiveAliasing(false);
 	app.setConfig(config);
 
 	app.calculateSourcesSinksEntrypoints("SourcesAndSinks.txt");
