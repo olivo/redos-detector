@@ -3,6 +3,7 @@ import java.util.ArrayList;
 import soot.jimple.infoflow.android.SetupApplication;
 import soot.jimple.infoflow.android.config.SootConfigForAndroid;
 import soot.jimple.infoflow.android.InfoflowAndroidConfiguration;
+import soot.jimple.infoflow.android.source.AndroidSourceSinkManager;
 import soot.jimple.infoflow.entryPointCreators.AndroidEntryPointCreator;
 import soot.jimple.infoflow.Infoflow;
 import soot.jimple.infoflow.results.InfoflowResults;
@@ -32,14 +33,21 @@ class ReDoSDetector {
 	app.setTaintWrapper(easyTaintWrapper);
 
 	InfoflowAndroidConfiguration config = app.getConfig();
+
 	config.setAccessPathLength(1);
 	config.setComputeResultPaths(false);
 	config.setEnableCallbacks(false);
 	config.setEnableArraySizeTainting(false);
 	config.setEnableExceptionTracking(false);
+	config.setEnableImplicitFlows(false);
 	config.setEnableStaticFieldTracking(false);
+	config.setIgnoreFlowsInSystemPackages(true);
+	config.setInspectSources(false);
 	config.setInspectSinks(false);
 	config.setFlowSensitiveAliasing(false);
+	config.setLayoutMatchingMode(AndroidSourceSinkManager.LayoutMatchingMode.NoMatch);
+	config.setStopAfterFirstFlow(true);
+
 	app.setConfig(config);
 
 	app.calculateSourcesSinksEntrypoints("SourcesAndSinks.txt");
