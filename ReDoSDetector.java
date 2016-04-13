@@ -30,7 +30,8 @@ class ReDoSDetector {
 	System.out.println("Analyzing APK: " + apkFileLocation);
 	SetupApplication app = new SetupApplication(androidJar, apkFileLocation);
 	EasyTaintWrapper easyTaintWrapper = new EasyTaintWrapper(new File("EasyTaintWrapperSource.txt"));
-	app.setTaintWrapper(easyTaintWrapper);
+	TaintWrapper taintWrapper = new TaintWrapper(easyTaintWrapper);
+	app.setTaintWrapper(taintWrapper);
 
 	InfoflowAndroidConfiguration config = app.getConfig();
 
