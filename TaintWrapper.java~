@@ -1,0 +1,6 @@
+import soot.jimple.infoflow.taintWrappers.AbstractTaintWrapper;
+
+class TaintWrapper extends AbstractTaintWrapper {
+
+
+}
