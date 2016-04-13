@@ -34,19 +34,27 @@ class ReDoSDetector {
 
 	InfoflowAndroidConfiguration config = app.getConfig();
 
-	config.setAccessPathLength(1);
+	config.setAccessPathLength(3);
 	config.setComputeResultPaths(false);
 	config.setEnableCallbacks(false);
-	config.setEnableArraySizeTainting(false);
+	config.setEnableCallbackSources(false);
+	config.setEnableArraySizeTainting(true);
 	config.setEnableExceptionTracking(false);
 	config.setEnableImplicitFlows(false);
-	config.setEnableStaticFieldTracking(false);
+	config.setEnableStaticFieldTracking(true);
+	config.setEnableTypeChecking(true);
 	config.setIgnoreFlowsInSystemPackages(true);
 	config.setInspectSources(false);
 	config.setInspectSinks(false);
-	config.setFlowSensitiveAliasing(false);
+	config.setFlowSensitiveAliasing(true);
 	config.setLayoutMatchingMode(AndroidSourceSinkManager.LayoutMatchingMode.NoMatch);
+	config.setMergeNeighbors(false);
+	config.setOneResultPerAccessPath(false);
+	config.setPathAgnosticResults(true);
 	config.setStopAfterFirstFlow(true);
+	config.setUseRecursiveAccessPaths(true);
+	config.setUseThisChainReduction(true);
+	config.setUseTypeTightening(true);
 
 	app.setConfig(config);
 
