@@ -7,4 +7,4 @@ if [ -z "$APK_FILE" ]; then
     exit 1
 fi
 
-java -Xmx7g ReDoSDetector ${APK_FILE}
+java -Xmx6g ReDoSDetector ${APK_FILE}

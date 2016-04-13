@@ -351,6 +351,6 @@
 
 <java.util.regex.Pattern: java.util.regex.Matcher matcher(java.lang.CharSequence)> -> _SINK_
 
-<java.io.File: java.lang.String getName()> -> _SOURCE_
+%<java.io.File: java.lang.String getName()> -> _SOURCE_
 
 
