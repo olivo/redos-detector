@@ -1,8 +1,0 @@
-
-
-TWITTER 
-
-[main] INFO soot.jimple.infoflow.Infoflow - The sink $r41 = virtualinvoke $r40.<java.util.regex.Pattern: java.util.regex.Matcher matcher(java.lang.CharSequence)>($r5) in method <com.twitter.android.UrlInterpreterActivity: com.twitter.util.concurrent.j c(android.net.Uri)> was called with values from the following sources:
-[main] INFO soot.jimple.infoflow.Infoflow - - $r5 = virtualinvoke $r0.<com.twitter.android.UrlInterpreterActivity: android.content.Intent getIntent()>() in method <com.twitter.android.UrlInterpreterActivity: void b(android.os.Bundle,com.twitter.android.client.bp)>
-[main] INFO soot.jimple.infoflow.Infoflow - - $r37 = virtualinvoke $r0.<com.twitter.android.UrlInterpreterActivity: android.content.Intent getIntent()>() in method <com.twitter.android.UrlInterpreterActivity: com.twitter.util.concurrent.j c(android.net.Uri)>
-Maximum memory consumption: 3910.293288 MB
