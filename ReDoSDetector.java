@@ -49,7 +49,7 @@ class ReDoSDetector {
 	config.setMergeNeighbors(false);
 	config.setOneResultPerAccessPath(false);
 	config.setPathAgnosticResults(true);
-	config.setStopAfterFirstFlow(false);
+	config.setStopAfterFirstFlow(true);
 	config.setUseRecursiveAccessPaths(true);
 	config.setUseThisChainReduction(true);
 	config.setUseTypeTightening(true);

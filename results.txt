@@ -1,0 +1,116 @@
+1) AMAZON
+
+[main] INFO soot.jimple.infoflow.Infoflow - The sink $r4 = virtualinvoke $r1.<java.util.regex.Pattern: java.util.regex.Matcher matcher(java.lang.CharSequence)>($r2) in method <com.amazon.mShop.util.WebUtils: boolean isSupportedAmazonHost(android.net.Uri)> was called with values from the following sources:
+[main] INFO soot.jimple.infoflow.Infoflow - - $r2 = virtualinvoke $r0.<com.amazon.mShop.publicurl.GenericDeepLinkWebActivity: android.content.Intent getIntent()>() in method <com.amazon.mShop.publicurl.GenericDeepLinkWebActivity: void onCreate(android.os.Bundle)>
+Maximum memory consumption: 827.939008 MB
+=== Finishing ReDoS Detector ===
+
+real	1m30.267s
+user	2m48.177s
+sys	0m1.717s
+
+2) EBAY
+
+[main] INFO soot.jimple.infoflow.Infoflow - The sink $r3 = virtualinvoke $r1.<java.util.regex.Pattern: java.util.regex.Matcher matcher(java.lang.CharSequence)>($r2) in method <com.ebay.common.util.ImageCache: java.lang.String rewriteThumbs(java.lang.String,java.util.regex.Pattern,java.lang.String)> was called with values from the following sources:
+[main] INFO soot.jimple.infoflow.Infoflow - - $r1 = interfaceinvoke $r8.<android.database.Cursor: java.lang.String getString(int)>(0) in method <com.ebay.mobile.notifications.ItemCache: java.lang.String getItemPictureImageUrl(android.content.Context,java.lang.String)>
+Maximum memory consumption: 1598.2624 MB
+=== Finishing ReDoS Detector ===
+
+real	1m19.263s
+user	2m18.882s
+sys	0m2.229s
+
+
+3) FACEBOOK
+
+[main] WARN soot.jimple.infoflow.Infoflow - No results found.
+Maximum memory consumption: 252.604384 MB
+=== Finishing ReDoS Detector ===
+
+real	0m13.593s
+user	0m25.341s
+sys	0m0.645s
+
+
+
+4) FACEBOOK MESSENGER
+
+[main] ERROR soot.jimple.infoflow.Infoflow - No sinks found, aborting analysis
+=== Finishing ReDoS Detector ===
+
+real	0m8.404s
+user	0m14.075s
+sys	0m0.342s
+
+
+
+5) PINTEREST
+
+[main] INFO soot.jimple.infoflow.Infoflow - The sink $r6 = virtualinvoke $r0.<java.util.regex.Pattern: java.util.regex.Matcher matcher(java.lang.CharSequence)>($r5) in method <com.pinterest.base.Device: java.lang.String getDefaultEmailAddress()> was called with values from the following sources:
+[main] INFO soot.jimple.infoflow.Infoflow - - $r4 = virtualinvoke $r3.<android.accounts.AccountManager: android.accounts.Account[] getAccounts()>() in method <com.pinterest.base.Device: java.lang.String getDefaultEmailAddress()>
+Maximum memory consumption: 917.879936 MB
+=== Finishing ReDoS Detector ===
+
+real	1m28.935s
+user	2m36.468s
+sys	0m2.650s
+
+
+
+6) TWITTER 
+
+[main] INFO soot.jimple.infoflow.Infoflow - The sink $r41 = virtualinvoke $r40.<java.util.regex.Pattern: java.util.regex.Matcher matcher(java.lang.CharSequence)>($r5) in method <com.twitter.android.UrlInterpreterActivity: com.twitter.util.concurrent.j c(android.net.Uri)> was called with values from the following sources:
+[main] INFO soot.jimple.infoflow.Infoflow - - $r5 = virtualinvoke $r0.<com.twitter.android.UrlInterpreterActivity: android.content.Intent getIntent()>() in method <com.twitter.android.UrlInterpreterActivity: void b(android.os.Bundle,com.twitter.android.client.bp)>
+[main] INFO soot.jimple.infoflow.Infoflow - - $r37 = virtualinvoke $r0.<com.twitter.android.UrlInterpreterActivity: android.content.Intent getIntent()>() in method <com.twitter.android.UrlInterpreterActivity: com.twitter.util.concurrent.j c(android.net.Uri)>
+Maximum memory consumption: 3910.293288 MB
+
+
+real	5m33.109s
+user	10m25.617s
+sys	0m5.661s
+
+
+
+7) UBER
+
+> 60 mins
+
+
+
+8) VENMO
+
+[main] INFO soot.jimple.infoflow.Infoflow - The sink $r3 = virtualinvoke $r2.<java.util.regex.Pattern: java.util.regex.Matcher matcher(java.lang.CharSequence)>($r1) in method <io.fabric.sdk.android.services.common.IdManager: java.lang.String formatId(java.lang.String)> was called with values from the following sources:
+[main] INFO soot.jimple.infoflow.Infoflow - - $r3 = virtualinvoke $r2.<android.bluetooth.BluetoothAdapter: java.lang.String getAddress()>() in method <io.fabric.sdk.android.services.common.IdManager: java.lang.String getBluetoothMacAddress()>
+Maximum memory consumption: 1158.343128 MB
+
+real	1m18.929s
+user	2m19.627s
+sys	0m1.666s
+
+
+
+
+9) WALMART
+
+
+[main] INFO soot.jimple.infoflow.Infoflow - The sink $r4 = virtualinvoke $r3.<java.util.regex.Pattern: java.util.regex.Matcher matcher(java.lang.CharSequence)>($r0) in method <com.walmart.android.util.WalmartUri: com.walmart.android.util.WalmartUri parse(java.lang.String)> was called with values from the following sources:
+[main] INFO soot.jimple.infoflow.Infoflow - - $r4 = virtualinvoke $r0.<com.walmart.android.app.main.MainActivity: android.content.Intent getIntent()>() in method <com.walmart.android.app.main.MainActivity: void onCreate(android.os.Bundle)>
+[main] INFO soot.jimple.infoflow.Infoflow - - $r5 = virtualinvoke $r0.<com.walmart.android.app.main.ProductDetailsActivity: android.content.Intent getIntent()>() in method <com.walmart.android.app.main.ProductDetailsActivity: void onCreate(android.os.Bundle)>
+[main] INFO soot.jimple.infoflow.Infoflow - - $r1 = virtualinvoke $r0.<com.walmart.android.app.main.MainActivity: android.content.Intent getIntent()>() in method <com.walmart.android.app.main.MainActivity: android.net.Uri getReferrerCompatible()>
+Maximum memory consumption: 928.560544 MB
+
+real	0m58.615s
+user	1m48.711s
+sys	0m1.798s
+
+
+10) WHATSAPP
+
+[main] INFO soot.jimple.infoflow.Infoflow - The sink $r4 = virtualinvoke $r3.<java.util.regex.Pattern: java.util.regex.Matcher matcher(java.lang.CharSequence)>($r0) in method <com.whatsapp.p8: java.util.ArrayList r(java.lang.String)> was called with values from the following sources:
+[main] INFO soot.jimple.infoflow.Infoflow - - $r10 = virtualinvoke $r0.<com.whatsapp.Conversation: android.content.Intent getIntent()>() in method <com.whatsapp.Conversation: void onStart()>
+Maximum memory consumption: 3289.946816 MB
+=== Finishing ReDoS Detector ===
+
+real	5m53.863s
+user	10m28.615s
+sys	0m4.873s
