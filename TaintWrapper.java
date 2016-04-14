@@ -53,7 +53,6 @@ class TaintWrapper extends AbstractTaintWrapper {
 	    }
 	}
 
-
 	return taints;
     }
 

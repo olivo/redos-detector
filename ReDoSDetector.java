@@ -58,8 +58,9 @@ class ReDoSDetector {
 
 
 	EasyTaintWrapper easyTaintWrapper = new EasyTaintWrapper(new File("EasyTaintWrapperSource.txt"));
-	TaintWrapper taintWrapper = new TaintWrapper(easyTaintWrapper);
-	app.setTaintWrapper(taintWrapper);
+	//TaintWrapper taintWrapper = new TaintWrapper(easyTaintWrapper);
+	//app.setTaintWrapper(taintWrapper);
+	app.setTaintWrapper(easyTaintWrapper);
 
 
 	app.calculateSourcesSinksEntrypoints("SourcesAndSinks.txt");
