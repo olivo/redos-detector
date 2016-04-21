@@ -1,0 +1,69 @@
+Potentially harmful regular expressions:
+
+1)
+Amazon
+com.squareup.javawriter.JavaWriter.jimple:        $r3 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("(?:[\\w$]+\\.)*([\\w\\.*$]+)");
+
+com.amazon.mShop.util.WebUtils.jimple:        $r1 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String,int)>("^(.+\\.amazon|amazon)\\.(com|com\\.mx|co\\.uk|de|fr|es|in|it|co\\.jp|jp|ca|cn|com\\.cn|com\\.br|com\\.mx|com\\.au|ru|nl)$", 2);
+
+com.amazon.mShop.payment.alipay.AlipayAdapter.jimple:        $r0 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("\\s*([^;]+?)\\s*=\\s*\\{(.*?)\\}\\s*");
+
+com.amazon.device.crashmanager.ExtractJavaVersionHeaderProcessor.jimple:        $r0 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("^\\S+\\s+v(\\d+)\\s+\\((.+)\\)$");
+
+com.amazon.device.crashmanager.CrashDescriptorUtil.jimple:        $r0 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("([a-zA-Z0-9_\\.\\$]+(Exception|Error|TerribleFailure))|(at\\s.*\\(.*\\))|#\\d+\\s+pc\\s+[\\w\\d]+\\s+([^\\+^\\r^\\n]+)");
+
+dagger.internal.codegen.GraphVisualizer.jimple:        $r0 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("(?:@(?:[\\w$]+\\.)*([\\w$]+)(?:\\(.*\\))?/)?(?:members/)?(?:[\\w$]+\\.)*([\\w$]+)(\\<[^/]+\\>)?((\\[\\])*)");
+
+
+2) Pinterest
+
+com.paypal.android.sdk.bx.jimple:        $r3 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("^\\s*(\\d+(\\.\\d+)*)\\s*([a-zA-Z]+)\\s*$");
+
+io.card.payment.ui.ViewUtil.jimple:        $r1 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("^\\s*(\\d+(\\.\\d+)*)\\s*([a-zA-Z]+)\\s*$");
+
+
+3) Twitter
+
+bnb.jimple:        $r0 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("[a-zA-Z0-9+._%-]{1,256}\\@[a-zA-Z0-9][a-zA-Z0-9-]{0,64}(\\.[a-zA-Z0-9][a-zA-Z0-9-]{1,25})+");
+
+bnb.jimple:        $r0 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("\\b(?:(?:[\\w-]+://?|www[.])[^\\s()<>]+(?:\\([\\w\\d]+\\)|(?:[^\\p{Punct}\\s]|/)))");
+
+com.squareup.okhttp.v_1_5_1.internal.tls.OkHostnameVerifier.jimple:        $r0 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("([0-9a-fA-F]*:[0-9a-fA-F:.]*)|([\\d.]+)");
+
+4) Venmo
+
+com.helpshift.util.HSPattern.jimple:        $r0 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("[a-zA-Z0-9\\+\\.\\_\\%\\-\\+]{1,256}\\@[a-zA-Z0-9][a-zA-Z0-9\\-]{0,64}(\\.[a-zA-Z0-9][a-zA-Z0-9\\-]{0,25})+");
+
+
+======================
+
+Java Patterns
+
+
+   public static final String GOOD_IRI_CHAR =
+        "a-zA-Z0-9\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF";
+
+    private static final String IRI
+        = "[" + GOOD_IRI_CHAR + "]([" + GOOD_IRI_CHAR + "\\-]{0,61}[" + GOOD_IRI_CHAR + "]){0,1}";
+
+    private static final String GOOD_GTLD_CHAR =
+        "a-zA-Z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF";
+
+    private static final String GTLD = "[" + GOOD_GTLD_CHAR + "]{2,63}";
+
+    private static final String HOST_NAME = "(" + IRI + "\\.)+" + GTLD;
+
+
+    public static final Pattern EMAIL_ADDRESS
+        = Pattern.compile(
+            "[a-zA-Z0-9\\+\\.\\_\\%\\-\\+]{1,256}" +
+            "\\@" +
+            "[a-zA-Z0-9][a-zA-Z0-9\\-]{0,64}" +
+            "(" +
+                "\\." +
+                "[a-zA-Z0-9][a-zA-Z0-9\\-]{0,25}" +
+            ")+"
+        );
+
+
+
