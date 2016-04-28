@@ -352,3 +352,4 @@
 <com.google.common.base.CharMatcher: boolean matchesNoneOf(java.lang.CharSequence)> -> _SINK_
 
 <java.util.regex.Pattern: java.util.regex.Matcher matcher(java.lang.CharSequence)> -> _SINK_
+<java.util.regex.Matcher: boolean find()> -> _SINK_
