@@ -43,6 +43,7 @@ class TaintWrapper extends AbstractTaintWrapper {
 
 	// Propagating custom taint over the receiving object
 	// of a call to put with a tainted value.
+	/*
 	if(method.getSignature().equals("<java.util.EnumMap: java.lang.Object put(java.lang.Enum,java.lang.Object)>")){
 	    InvokeExpr invokeExpr = stmt.getInvokeExpr();
 	    InstanceInvokeExpr instanceInvokeExpr = (InstanceInvokeExpr)invokeExpr;
@@ -52,6 +53,7 @@ class TaintWrapper extends AbstractTaintWrapper {
 	       taints.add(AccessPathFactory.v().createAccessPath(base, true));
 	    }
 	}
+	*/
 
 	return taints;
     }
