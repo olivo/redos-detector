@@ -7,6 +7,10 @@ com.squareup.javawriter.JavaWriter.jimple:        $r3 = staticinvoke <java.util.
 [Doesn't seem vulnerable, because the matched strings are constant or predefined type or class strings]
 
 
+com.amazon.mShop.net.CookieBridge.jimple:        ".*(\\.amazon\\..*)"
+[Seems vulnerable because there's an overlap between the first .* and the last .*]
+
+
 com.amazon.mShop.util.WebUtils.jimple:        $r1 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String,int)>("^(.+\\.amazon|amazon)\\.(com|com\\.mx|co\\.uk|de|fr|es|in|it|co\\.jp|jp|ca|cn|com\\.cn|com\\.br|com\\.mx|com\\.au|ru|nl)$", 2);
 
 [Potential exploitation via intent creation with malicious URL to com.amazon.mShop.publicurl.GenericDeepLinkWebActivity]
