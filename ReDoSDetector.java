@@ -57,13 +57,14 @@ class ReDoSDetector {
 	app.setConfig(config);
 
 
-	EasyTaintWrapper easyTaintWrapper = new EasyTaintWrapper(new File("EasyTaintWrapperSource.txt"));
-	//TaintWrapper taintWrapper = new TaintWrapper(easyTaintWrapper);
-	//app.setTaintWrapper(taintWrapper);
-	app.setTaintWrapper(easyTaintWrapper);
-
+	//EasyTaintWrapper easyTaintWrapper = new EasyTaintWrapper(new File("EasyTaintWrapperSource.txt"));
+	TaintWrapper taintWrapper = new TaintWrapper("EasyTaintWrapperSource.txt");
+	app.setTaintWrapper(taintWrapper);
+	//app.setTaintWrapper(easyTaintWrapper);
+	
 
 	app.calculateSourcesSinksEntrypoints("SourcesAndSinks.txt");
+
 	app.runInfoflow();
 	
 	System.out.println("=== Finishing ReDoS Detector ===");

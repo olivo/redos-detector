@@ -1,3 +1,5 @@
+import java.io.File;
+import java.io.IOException;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -13,10 +15,16 @@ import soot.Value;
 
 class TaintWrapper extends AbstractTaintWrapper {
 
-    private EasyTaintWrapper easyTaintWrapper;
+    private final EasyTaintWrapper easyTaintWrapper;
 
-    public TaintWrapper(EasyTaintWrapper easyTaintWrapper){
-	this.easyTaintWrapper = easyTaintWrapper;
+    public TaintWrapper(String easyTaintWrapperFilename){
+	EasyTaintWrapper etw = null;
+	try{
+	    etw = new EasyTaintWrapper(new File(easyTaintWrapperFilename));
+	} catch(IOException e){
+	    System.out.println("ERROR: Could not create taint wrapper from file: " + easyTaintWrapperFilename);
+	}
+	this.easyTaintWrapper = etw;
     }
 
     private boolean anyTainted(AccessPath taintedPath, List<Value> values){
@@ -43,6 +51,9 @@ class TaintWrapper extends AbstractTaintWrapper {
 
 	// Propagating custom taint over the receiving object
 	// of a call to put with a tainted value.
+	if(method.getSignature().equals("<java.util.regex.Pattern: java.util.regex.Matcher matcher(java.lang.CharSequence)>")){
+		System.out.println("FOUND SINK!");
+	}
 	/*
 	if(method.getSignature().equals("<java.util.EnumMap: java.lang.Object put(java.lang.Enum,java.lang.Object)>")){
 	    InvokeExpr invokeExpr = stmt.getInvokeExpr();
