@@ -71,7 +71,7 @@ class TaintWrapper extends AbstractTaintWrapper {
 
     @Override
     public boolean isExclusiveInternal(Stmt stmt, AccessPath taintedPath){
-	return true;
+	return false;
     }
 
     @Override
