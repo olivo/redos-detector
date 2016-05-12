@@ -1,0 +1,15 @@
+Bank of America
+==============
+com.bofa.ecom.auth.activities.enrollments.CreateIdActivity.jimple:        "^[a-zA-Z0-9@;()#*=+/?{}~,._//-]{8,20}+"
+
+com.bofa.ecom.auth.activities.enrollments.CreatePasscodeActivity.jimple:        "^[a-zA-Z0-9@;()#*=+/?{}~,._//-]{8,20}+"
+
+Bitcoin Wallet
+==============
+de.schildbach.wallet.util.Formats.jimple:        "(?:([\\p{Alpha}\\p{Sc}]++)\\s?+)?([\\+\\-\uff0b\uff0d]?+(?:\\d*+\\.\\d{0,2}+|\\d++))(\\d++)?"
+
+Google Wallet
+==============
+com.google.android.libraries.phonenumbers.AsYouTypeFormatter.jimple:        "[-x\u2010-\u2015\u2212\u30fc\uff0d-\uff0f \u00a0\u00ad\u200b\u2060\u3000()\uff08\uff09\uff3b\uff3d.\\[\\]/~\u2053\u223c\uff5e]*(\\$\\d[-x\u2010-\u2015\u2212\u30fc\uff0d-\uff0f \u00a0\u00ad\u200b\u2060\u3000()\uff08\uff09\uff3b\uff3d.\\[\\]/~\u2053\u223c\uff5e]*)+"
+
+

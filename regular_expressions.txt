@@ -243,8 +243,11 @@ io.card.payment.ui.ViewUtil.jimple:        "^\\s*(\\d+(\\.\\d+)*)\\s*([a-zA-Z]+)
 Pinterest
 ==========
 android.support.multidex.MultiDex.jimple:        "(\\d+)\\.(\\d+)(\\.\\d+)?"
+
 com.braintreepayments.api.BraintreeApi.jimple:        "([A-Za-z0-9+/]{4})*([A-Za-z0-9+/]{4}|[A-Za-z0-9+/]{3}=|[A-Za-z0-9+/]{2}==)"
+
 com.braintreepayments.api.models.ClientToken.jimple:        "([A-Za-z0-9+/]{4})*([A-Za-z0-9+/]{4}|[A-Za-z0-9+/]{3}=|[A-Za-z0-9+/]{2}==)"
+
 com.facebook.GraphRequest.jimple:        "^/?v\\d+\\.\\d+/(.*)"
 com.paypal.android.sdk.bx.jimple:        "^\\s*(\\d+(\\.\\d+)*)\\s*([a-zA-Z]+)\\s*$"
 com.paypal.android.sdk.ce.jimple:        "^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,} *$"
@@ -372,3 +375,349 @@ com.venmo.web.VenmoURLActivity.jimple:        "^/touch.*"
 io.fabric.sdk.android.services.common.AbstractSpiCall.jimple:        "http(s?)://[^\\/]+"
 io.fabric.sdk.android.services.common.CommonUtils.jimple:        "\\s*:\\s*"
 io.fabric.sdk.android.services.common.IdManager.jimple:        "[^\\p{Alnum}]"
+
+
+
+---------------------------------------------------------------------------
+
+Android Pay
+====================
+
+com.bumptech.glide.load.engine.executor.GlideExecutor.jimple:        "cpu[0-9]+"
+com.google.android.gms.common.util.zzm.jimple:        "^(25[0-5]|2[0-4]\\d|[0-1]?\\d?\\d)(\\.(25[0-5]|2[0-4]\\d|[0-1]?\\d?\\d)){3}$"
+com.google.android.gms.common.util.zzm.jimple:        "^(?:[0-9a-fA-F]{1,4}:){7}[0-9a-fA-F]{1,4}$"
+com.google.android.gms.common.util.zzm.jimple:        "^((?:[0-9A-Fa-f]{1,4}(?::[0-9A-Fa-f]{1,4})*)?)::((?:[0-9A-Fa-f]{1,4}(?::[0-9A-Fa-f]{1,4})*)?)$"
+com.google.android.gms.common.util.zzv.jimple:        "\\$\\{(.*?)\\}"
+com.google.android.gms.gcm.GcmPubSub.jimple:        "/topics/[a-zA-Z0-9-_.~%]{1,900}"
+com.google.android.gms.people.internal.zzp.jimple:        "\\,"
+com.google.android.gms.people.internal.zzp.jimple:        "[\u2028\u2029 \u00a0\u1680\u180e\u2000\u2001\u2002\u2003\u2004\u2005\u2006\u2007\u2008\u2009\u200a\u202f\u205f\u3000\t\u000b\f\u001c\u001d\u001e\u001f\n\r]+"
+com.google.android.gms.tagmanager.DataLayer.jimple:        "(\\d+)\\s*([smhd]?)"
+com.google.android.gms.tagmanager.UniversalAnalyticsTag.jimple:        "dimension(\\d+)"
+com.google.android.gms.tagmanager.UniversalAnalyticsTag.jimple:        "metric(\\d+)"
+com.google.android.gsf.Gservices.jimple:        "^(1|true|t|on|yes|y)$"
+com.google.android.gsf.Gservices.jimple:        "^(0|false|f|off|no|n)$"
+com.google.android.libraries.phonenumbers.PhoneNumberUtil.jimple:        "[\\d]+(?:[~\u2053\u223c\uff5e][\\d]+)?"
+com.google.android.libraries.phonenumbers.PhoneNumberUtil.jimple:        "[+\uff0b]+"
+com.google.android.libraries.phonenumbers.PhoneNumberUtil.jimple:        "[-x\u2010-\u2015\u2212\u30fc\uff0d-\uff0f \u00a0\u00ad\u200b\u2060\u3000()\uff08\uff09\uff3b\uff3d.\\[\\]/~\u2053\u223c\uff5e]+"
+com.google.android.libraries.phonenumbers.PhoneNumberUtil.jimple:        $r13 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("(\\p{Nd})");
+com.google.android.libraries.phonenumbers.PhoneNumberUtil.jimple:        $r13 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("[+\uff0b\\p{Nd}]");
+com.google.android.libraries.phonenumbers.PhoneNumberUtil.jimple:        $r13 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("[\\\\/] *x");
+com.google.android.libraries.phonenumbers.PhoneNumberUtil.jimple:        $r13 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("[[\\P{N}&&\\P{L}]&&[^#]]+$");
+com.google.android.libraries.phonenumbers.PhoneNumberUtil.jimple:        $r13 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("(?:.*?[A-Za-z]){3}.*");
+com.google.android.libraries.phonenumbers.PhoneNumberUtil.jimple:        $r13 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String,int)>($r4, 66);
+com.google.android.libraries.phonenumbers.PhoneNumberUtil.jimple:        $r13 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String,int)>($r4, 66);
+com.google.android.libraries.phonenumbers.PhoneNumberUtil.jimple:        $r13 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("(\\D+)");
+com.google.android.libraries.phonenumbers.PhoneNumberUtil.jimple:        $r13 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("(\\$\\d)");
+com.google.android.libraries.phonenumbers.PhoneNumberUtil.jimple:        $r13 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("\\$NP");
+com.google.android.libraries.phonenumbers.PhoneNumberUtil.jimple:        $r13 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("\\$FG");
+com.google.android.libraries.phonenumbers.PhoneNumberUtil.jimple:        $r13 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("\\$CC");
+com.google.android.libraries.phonenumbers.PhoneNumberUtil.jimple:        $r13 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("\\(?\\$1\\)?");
+com.google.android.libraries.phonenumbers.RegexCache.jimple:        $r4 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>($r1);
+com.google.android.libraries.social.media.url.ImageProxyUtil.jimple:        $r0 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("^(((http(s)?):)?\\/\\/images(\\d)?-.+-opensocial\\.googleusercontent\\.com\\/gadgets\\/proxy\\?)");
+com.google.android.libraries.social.rpc.apiary.ApiaryUrls.jimple:        $r8 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String,int)>($r7, 2);
+com.google.commerce.tapandpay.android.cardview.PaymentDisplayNameHelper.jimple:        $r0 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String,int)>("^(american express|amex|discover|disc|jcb|mastercard|mc|visa)\\s?x*\\s?-?\u2022*\\s?-?[0-9]{4,}$", 2);
+com.google.photos.base.BaseImageUrlUtil.jimple:        $r2 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("^((http(s)?):)?\\/\\/((((lh[3-6](-tt|-d[a-g,z])?\\.((ggpht)|(googleusercontent)|(google)))|(([1-4]\\.bp\\.blogspot)|(bp[0-3]\\.blogger))|((((cp|ci|gp)[3-6])|(ap[1-2]))\\.(ggpht|googleusercontent))|(gm[1-4]\\.ggpht)|(((yt[3-4])|(sp[1-3]))\\.(ggpht|googleusercontent)))\\.com)|(dp[3-6]\\.googleusercontent\\.cn)|(lh[3-6]\\.(googleadsserving\\.cn|xn--9kr7l\\.com))|(photos\\-image\\-(dev|qa)(-auth)?\\.corp\\.google\\.com)|((dev|dev2|dev3|qa|qa2|qa3|qa-red|qa-blue|canary)[-.]lighthouse\\.sandbox\\.google\\.com\\/image)|(image\\-dev\\-lighthouse(-auth)?\\.sandbox\\.google\\.com(\\/image)?))\\/");
+com.squareup.okhttp.internal.DiskLruCache.jimple:        $r0 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("[a-z0-9_-]{1,120}");
+com.squareup.okhttp.internal.tls.OkHostnameVerifier.jimple:        $r0 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("([0-9a-fA-F]*:[0-9a-fA-F:.]*)|([\\d.]+)");
+com.squareup.okhttp.MediaType.jimple:        $r0 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("([a-zA-Z0-9-!#$%&\'*+.^_`{|}~]+)/([a-zA-Z0-9-!#$%&\'*+.^_`{|}~]+)");
+com.squareup.okhttp.MediaType.jimple:        $r0 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>(";\\s*(?:([a-zA-Z0-9-!#$%&\'*+.^_`{|}~]+)=(?:([a-zA-Z0-9-!#$%&\'*+.^_`{|}~]+)|\"([^\"]*)\"))?");
+org.chromium.net.CronetEngine$Builder.jimple:        $r0 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("^[0-9\\.]*$");
+
+
+Bank of America
+
+b.a.f.jimple:        $r0 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("\\|[^\\|]*\\|");
+b.a.f.jimple:        $r0 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("f{1,9}");
+b.a.f.jimple:        $r7 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>($r6);
+b.a.l.jimple:        $r0 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("(\\d{1,4})-(\\d\\d)-(\\d\\d)|(\\d{1,4})-(\\d\\d)|(\\d{1,4})");
+b.a.l.jimple:        $r0 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("(\\d\\d)\\:(\\d\\d)\\:(\\d\\d)\\.(\\d{1,9})|(\\d\\d)\\:(\\d\\d)\\:(\\d\\d)|(\\d\\d)\\:(\\d\\d)|(\\d\\d)");
+
+bofa.android.mobilecore.c.d.jimple:        $r1 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>(".*_upgrade_([0-9]+)-([0-9]+).*");
+
+com.a.a.c.a.jimple:        "^\\S+\\s+([0-9]+).*$"
+
+com.bofa.ecom.accounts.activities.fav.a.a.jimple:        $r5 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("###.###.####");
+com.bofa.ecom.alerts.activities.a.a.jimple:        $r1 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("(\\d{2}):(\\d{2})\\s(AM|PM)");
+com.bofa.ecom.alerts.activities.s.jimple:        $r18 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("\\d.\\d{3}.\\d{3}.\\d{4}");
+com.bofa.ecom.auth.d.d.jimple:        $r2 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>($r1);
+com.c.a.a.b.jimple:        $r1 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("[a-z0-9_-]{1,120}");
+com.c.a.a.d.b.jimple:        $r0 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("([0-9a-fA-F]*:[0-9a-fA-F:.]*)|([\\d.]+)");
+com.c.a.ak.jimple:        $r0 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("([a-zA-Z0-9-!#$%&\'*+.^_`{|}~]+)/([a-zA-Z0-9-!#$%&\'*+.^_`{|}~]+)");
+com.c.a.ak.jimple:        $r0 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>(";\\s*(?:([a-zA-Z0-9-!#$%&\'*+.^_`{|}~]+)=(?:([a-zA-Z0-9-!#$%&\'*+.^_`{|}~]+)|\"([^\"]*)\"))?");
+com.google.android.gms.internal.bg.jimple:        $r0 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("\\\\.");
+com.google.android.gms.internal.bg.jimple:        $r0 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("[\\\\\"/\u0008\f\n\r\t]");
+com.google.android.gms.tagmanager.d.jimple:        $r3 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("(\\d+)\\s*([smhd]?)");
+org.apache.a.a.g.jimple:        $r0 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("\\s+");
+org.apache.http.conn.util.InetAddressUtils.jimple:        $r0 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("^(25[0-5]|2[0-4]\\d|[0-1]?\\d?\\d)(\\.(25[0-5]|2[0-4]\\d|[0-1]?\\d?\\d)){3}$");
+org.apache.http.conn.util.InetAddressUtils.jimple:        $r0 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("^(?:[0-9a-fA-F]{1,4}:){7}[0-9a-fA-F]{1,4}$");
+
+org.apache.http.conn.util.InetAddressUtils.jimple:        $r0 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("^((?:[0-9A-Fa-f]{1,4}(?::[0-9A-Fa-f]{1,4})*)?)::((?:[0-9A-Fa-f]{1,4}(?::[0-9A-Fa-f]{1,4})*)?)$");
+
+
+
+
+com.bofa.ecom.accounts.activities.EditTransactionDescriptionActivity.jimple:        $z1 = virtualinvoke $r1.<java.lang.String: boolean matches(java.lang.String)>("[\\d\\w\\s\\_\\-\\/\\\'\\.\\:\\;]+");
+com.bofa.ecom.accounts.activities.occ.OCCFormCheckDetailsActivity.jimple:        $z0 = virtualinvoke $r9.<java.lang.String: boolean matches(java.lang.String)>("[0-9.-]+");
+com.bofa.ecom.auth.activities.enrollments.CreateIdActivity.jimple:        $z1 = virtualinvoke $r1.<java.lang.String: boolean matches(java.lang.String)>("^.{6,32}$");
+
+com.bofa.ecom.auth.activities.enrollments.CreateIdActivity.jimple:        ".*[A-Za-z0-9].*"
+
+com.bofa.ecom.auth.activities.enrollments.CreateIdActivity.jimple:        $z1 = virtualinvoke $r1.<java.lang.String: boolean matches(java.lang.String)>("^(?=\\d{6,32}$).*");
+com.bofa.ecom.auth.activities.enrollments.CreateIdActivity.jimple:        $z1 = virtualinvoke $r1.<java.lang.String: boolean matches(java.lang.String)>("^[a-zA-Z0-9@;()#*=+/?{}~,._//-]{6,32}+");
+com.bofa.ecom.auth.activities.enrollments.CreateIdActivity.jimple:        $z2 = virtualinvoke $r1.<java.lang.String: boolean matches(java.lang.String)>("^.{8,20}$");
+
+
+com.bofa.ecom.auth.activities.enrollments.CreateIdActivity.jimple:        $z2 = virtualinvoke $r1.<java.lang.String: boolean matches(java.lang.String)>("^[a-zA-Z0-9@;()#*=+/?{}~,._//-]{8,20}+");
+
+
+com.bofa.ecom.auth.activities.enrollments.CreateIdActivity.jimple:        $z2 = virtualinvoke $r1.<java.lang.String: boolean matches(java.lang.String)>("^(?=.*?[a-zA-Z])(?=.*?\\d).*");
+com.bofa.ecom.auth.activities.enrollments.CreatePasscodeActivity.jimple:        $z0 = virtualinvoke $r1.<java.lang.String: boolean matches(java.lang.String)>("^.{8,20}$");
+
+
+com.bofa.ecom.auth.activities.enrollments.CreatePasscodeActivity.jimple:        $z0 = virtualinvoke $r1.<java.lang.String: boolean matches(java.lang.String)>("^[a-zA-Z0-9@;()#*=+/?{}~,._//-]{8,20}+");
+
+
+com.bofa.ecom.auth.activities.enrollments.CreatePasscodeActivity.jimple:        $z0 = virtualinvoke $r1.<java.lang.String: boolean matches(java.lang.String)>("^(?=.*?[a-zA-Z])(?=.*?\\d).*");
+com.bofa.ecom.auth.activities.forgotflows.common.CreateNewPasscodeActivity.jimple:        $z1 = virtualinvoke $r2.<java.lang.String: boolean matches(java.lang.String)>("^(?=.*?[a-zA-Z])(?=.*?\\d).*");
+com.bofa.ecom.auth.activities.forgotflows.common.CreateNewPasscodeActivity.jimple:        $z1 = virtualinvoke $r2.<java.lang.String: boolean matches(java.lang.String)>("[A-Za-z0-9@#*()+={}/?~;,.\\-_)]+");
+
+
+com.bofa.ecom.auth.activities.forgotflows.common.e.jimple:        $z0 = virtualinvoke $r3.<java.lang.String: boolean matches(java.lang.String)>("^(?=.*?[a-zA-Z])(?=.*?\\d).*");
+
+
+com.bofa.ecom.auth.activities.forgotflows.common.e.jimple:        $z0 = virtualinvoke $r3.<java.lang.String: boolean matches(java.lang.String)>("[A-Za-z0-9@#*()+={}/?~;,.\\-_)]+");
+com.bofa.ecom.auth.activities.signin.OnlineIdActivity.jimple:        $z0 = virtualinvoke $r9.<java.lang.String: boolean matches(java.lang.String)>("\\d*");
+com.bofa.ecom.auth.d.d.jimple:        $z0 = virtualinvoke $r8.<java.lang.String: boolean matches(java.lang.String)>("\\d*");
+com.bofa.ecom.bbanextgen.activities.BBABankingCenterSearchView.jimple:        $z0 = virtualinvoke $r1.<java.lang.String: boolean matches(java.lang.String)>("[\\d\\w\\s\\_\\-\\/\\\'\\.\\,\\:\\;]+");
+com.bofa.ecom.bbanextgen.activities.BBABankingCenterSearchView.jimple:        $z0 = virtualinvoke $r1.<java.lang.String: boolean matches(java.lang.String)>("\\d+");
+com.bofa.ecom.billpay.activities.addedit.CompanySearchPartialMatchActivity.jimple:        $i0 = <com.bofa.ecom.billpay.f: int llv_potiential_matches>;
+com.bofa.ecom.billpay.f.jimple:    public static final int llv_potiential_matches;
+com.bofa.ecom.billpay.f.jimple:        <com.bofa.ecom.billpay.f: int llv_potiential_matches> = 2131493438;
+com.bofa.ecom.helpandsettings.activities.securitycenter.setting.ChangeOnlineIdActivity.jimple:        $z1 = virtualinvoke $r1.<java.lang.String: boolean matches(java.lang.String)>("\\d{6,32}");
+
+
+com.bofa.ecom.helpandsettings.activities.securitycenter.setting.ChangeOnlineIdActivity.jimple:        $z1 = virtualinvoke $r1.<java.lang.String: boolean matches(java.lang.String)>("(?=.*[a-zA-Z])([A-Za-z0-9@#*()+={}/?~;,.\\-_)]+)");
+
+
+com.bofa.ecom.helpandsettings.activities.securitycenter.setting.ChangeOnlineIdActivity.jimple:        $z0 = virtualinvoke $r1.<java.lang.String: boolean matches(java.lang.String)>("\\d{6,32}");
+
+
+com.bofa.ecom.helpandsettings.activities.securitycenter.setting.ChangeOnlineIdActivity.jimple:        $z0 = virtualinvoke $r1.<java.lang.String: boolean matches(java.lang.String)>("(?=.*[a-zA-Z])([A-Za-z0-9@#*()+={}/?~;,.\\-_)]+)");
+
+
+com.bofa.ecom.helpandsettings.activities.securitycenter.setting.ChangePasscodeActivity.jimple:        $z1 = virtualinvoke $r1.<java.lang.String: boolean matches(java.lang.String)>("^(?=.*?[a-zA-Z])(?=.*?\\d).*");
+com.bofa.ecom.helpandsettings.activities.securitycenter.setting.ChangePasscodeActivity.jimple:        $z1 = virtualinvoke $r1.<java.lang.String: boolean matches(java.lang.String)>("[A-Za-z0-9@#*()+={}/?~;,.\\-_)]+");
+com.bofa.ecom.helpandsettings.activities.securitycenter.setting.g.jimple:        $z0 = virtualinvoke $r3.<java.lang.String: boolean matches(java.lang.String)>("^(?=.*?[a-zA-Z])(?=.*?\\d).*");
+com.bofa.ecom.helpandsettings.activities.securitycenter.setting.g.jimple:        $z0 = virtualinvoke $r3.<java.lang.String: boolean matches(java.lang.String)>("[A-Za-z0-9@#*()+={}/?~;,.\\-_)]+");
+com.bofa.ecom.locations.activities.LocationHomeActivity.jimple:        $z0 = virtualinvoke $r1.<java.lang.String: boolean matches(java.lang.String)>("[\\d\\w\\s\\_\\-\\/\\\'\\.\\,\\:\\;]+");
+com.google.android.gms.tagmanager.ak.jimple:        $z1 = virtualinvoke $r2.<java.lang.String: boolean matches(java.lang.String)>("^tagmanager.c.\\S+:\\/\\/preview\\/p\\?id=\\S+&gtm_auth=\\S+&gtm_preview=\\d+(&gtm_debug=x)?$");
+com.google.android.gms.tagmanager.ak.jimple:        $z1 = virtualinvoke $r2.<java.lang.String: boolean matches(java.lang.String)>(".*?&gtm_debug=x$");
+com.google.android.gms.tagmanager.ak.jimple:        $z1 = virtualinvoke $r2.<java.lang.String: boolean matches(java.lang.String)>("^tagmanager.c.\\S+:\\/\\/preview\\/p\\?id=\\S+&gtm_preview=$");
+
+org.acra.e.i.jimple:        $z0 = virtualinvoke $r0.<java.lang.String: boolean matches(java.lang.String)>("(?:^|\\s)([1-9](?:\\d*|(?:\\d{0,2})(?:,\\d{3})*)(?:\\.\\d*[1-9])?|0?\\.\\d*[1-9]|0)(?:\\s|$)");
+
+
+Bitcoint Wallet
+=====================
+ch.qos.logback.core.util.Duration.jimple:        $r0 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String,int)>("([0-9]*(.[0-9]+)?)\\s*(|milli(second)?|second(e)?|minute|hour|day)s?", 2);
+
+com.squareup.okhttp.internal.tls.OkHostnameVerifier.jimple:        $r0 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("([0-9a-fA-F]*:[0-9a-fA-F:.]*)|([\\d.]+)");
+com.squareup.okhttp.MediaType.jimple:        $r0 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("([a-zA-Z0-9-!#$%&\'*+.^_`{|}~]+)/([a-zA-Z0-9-!#$%&\'*+.^_`{|}~]+)");
+com.squareup.okhttp.MediaType.jimple:        $r0 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>(";\\s*(?:([a-zA-Z0-9-!#$%&\'*+.^_`{|}~]+)=(?:([a-zA-Z0-9-!#$%&\'*+.^_`{|}~]+)|\"([^\"]*)\"))?");
+com.subgraph.orchid.circuits.path.ConfigNodeFilter.jimple:        $r0 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("^(\\d+)\\.(\\d+)\\.(\\d+)\\.(\\d+)/(\\d+)$");
+com.subgraph.orchid.circuits.path.ConfigNodeFilter.jimple:        $r0 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("^(\\d+\\.\\d+\\.\\d+\\.\\d+)/(\\d+)$");
+com.subgraph.orchid.circuits.path.ConfigNodeFilter.jimple:        $r0 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("^[A-Fa-f0-9]{40}$");
+com.subgraph.orchid.circuits.path.ConfigNodeFilter.jimple:        $r0 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("^\\{([A-Za-z]{2})\\}$");
+com.subgraph.orchid.circuits.path.ConfigNodeFilter.jimple:        $r0 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("^\\w{1,19}$");
+
+com.subgraph.orchid.directory.downloader.HttpConnection.jimple:        "HTTP/1\\.(\\d) (\\d+) (.*)"
+
+de.schildbach.wallet.ui.InputParser.jimple:        $r4 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("[0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ$\\*\\+\\-\\.\\/\\:]{100,}");
+
+
+
+de.schildbach.wallet.util.Formats.jimple:        "(?:([\\p{Alpha}\\p{Sc}]++)\\s?+)?([\\+\\-\uff0b\uff0d]?+(?:\\d*+\\.\\d{0,2}+|\\d++))(\\d++)?"
+
+
+
+de.schildbach.wallet.util.Formats.jimple:        $r0 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String,int)>("<p[^>]*>(.*)</p>\n?", 34);
+de.schildbach.wallet.util.Formats.jimple:        $r0 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String,int)>("(?:Payment request for Coinbase order code: (.+)|Payment request for BitPay invoice (.+) for merchant (.+))", 2);
+
+
+Google Chrome
+=================
+
+android.support.a.a.jimple:        $r1 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("(\\d+)\\.(\\d+)(\\.\\d+)?");
+com.google.android.b.c.jimple:        staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String,int)>("^(1|true|t|on|yes|y)$", 2);
+com.google.android.b.c.jimple:        staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String,int)>("^(0|false|f|off|no|n)$", 2);
+
+com.google.android.gms.cast.internal.m.jimple:        $r0 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("urn:x-cast:[-A-Za-z0-9_]+(\\.[-A-Za-z0-9_]+)*");
+
+com.google.android.gms.common.a.d.jimple:        staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("\\\\.");
+com.google.android.gms.common.a.d.jimple:        staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("[\\\\\"/\u0008\f\n\r\t]");
+com.google.android.gms.common.a.e.jimple:        staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("\\$\\{(.*?)\\}");
+com.google.android.gms.measurement.internal.aE.jimple:        $r3 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String,int)>($r2, $b1);
+org.chromium.base.SysUtils.jimple:        $r0 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("^MemTotal:\\s+([0-9]+) kB$");
+org.chromium.chrome.browser.contextualsearch.ContextualSearchPolicy.jimple:        $r0 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("\\s");
+org.chromium.chrome.browser.contextualsearch.ContextualSearchSelectionController.jimple:        $r7 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("(\\w|\\p{L}|\\p{N})+");
+org.chromium.chrome.browser.contextualsearch.ContextualSearchSelectionController.jimple:        $r7 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("^\\d$");
+org.chromium.chrome.browser.crash.CrashFileManager.jimple:        $r0 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("\\.dmp([0-9]*)$\\z");
+org.chromium.chrome.browser.crash.CrashFileManager.jimple:        $r0 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("\\.dmp([0-9]*)(\\.try[0-9])?\\z");
+org.chromium.chrome.browser.crash.CrashFileManager.jimple:        $r0 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("\\.up([0-9]*)\\z");
+org.chromium.chrome.browser.crash.CrashFileManager.jimple:        $r0 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("\\.tmp\\z");
+org.chromium.chrome.browser.crash.LogcatExtractionCallable.jimple:        $r0 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("((25[0-5]|2[0-4][0-9]|[0-1][0-9]{2}|[1-9][0-9]|[1-9])\\.(25[0-5]|2[0-4][0-9]|[0-1][0-9]{2}|[1-9][0-9]|[1-9]|0)\\.(25[0-5]|2[0-4][0-9]|[0-1][0-9]{2}|[1-9][0-9]|[1-9]|0)\\.(25[0-5]|2[0-4][0-9]|[0-1][0-9]{2}|[1-9][0-9]|[0-9]))");
+org.chromium.chrome.browser.crash.LogcatExtractionCallable.jimple:        $r0 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("([0-9a-fA-F]{2}[-:]+){5}[0-9a-fA-F]{2}");
+
+org.chromium.chrome.browser.crash.LogcatExtractionCallable.jimple:        "\\[\\w*:CONSOLE.*\\].*"
+
+org.chromium.chrome.browser.crash.LogcatExtractionCallable.jimple:        $r0 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("\\.dmp");
+org.chromium.chrome.browser.util.UrlUtilities.jimple:        $r2 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("^[\\w\\.-]*$");
+org.chromium.chrome.browser.util.UrlUtilities.jimple:        $r2 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("^[\\w\\.-]*$");
+org.chromium.chrome.browser.util.UrlUtilities.jimple:        $r2 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("^[\\w\\./-]*$");
+org.chromium.chrome.browser.util.UrlUtilities.jimple:        $r2 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("^[a-zA-Z]+$");
+org.chromium.components.webrestriction.WebRestrictionsContentProvider.jimple:        $r1 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("\\s*url\\s*=\\s*\'([^\']*)\'");
+org.chromium.sync.signin.AccountManagerHelper.jimple:        $r1 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("@");
+
+
+
+com.google.android.gms.cast.CastMediaControlIntent.jimple:        $z0 = virtualinvoke $r0.<java.lang.String: boolean matches(java.lang.String)>("[A-F0-9]+");
+com.google.android.gms.measurement.internal.e.jimple:        $z0 = staticinvoke <java.util.regex.Pattern: boolean matches(java.lang.String,java.lang.CharSequence)>("[+-]?[0-9]+", $r6);
+com.google.android.gms.measurement.internal.e.jimple:        $z0 = staticinvoke <java.util.regex.Pattern: boolean matches(java.lang.String,java.lang.CharSequence)>("[+-]?(([0-9]+\\.?)|([0-9]*\\.[0-9]+))", $r6);
+com.google.android.gms.measurement.internal.S.jimple:        $z0 = virtualinvoke $r5.<java.lang.String: boolean matches(java.lang.String)>("[A-Z]{3}");
+
+org.chromium.chrome.browser.externalnav.ExternalNavigationHandler.jimple:        ".*youtube\\.com.*[?&]pairingCode=.*"
+
+org.chromium.chrome.browser.nfc.BeamCallback.jimple:        $z0 = virtualinvoke $r0.<java.lang.String: boolean matches(java.lang.String)>("http|https");
+
+
+Google Wallet
+==================
+
+com.google.android.apps.wallet.widgets.transferdelay.TransferDelayViewModel.jimple:        $r0 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String,int)>("\u221e\u221e\u221e\u221e\u221e", 16);
+com.google.android.apps.wallet.wobl.WoblHolder.jimple:        $r2 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("comgooglewallet:///nativeURI\\?.+");
+com.google.android.gms.common.util.zzq.jimple:        $r0 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("\\$\\{(.*?)\\}");
+com.google.android.gms.people.internal.zzp.jimple:        $r5 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("\\,");
+com.google.android.gms.people.internal.zzp.jimple:        $r5 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("[\u2028\u2029 \u00a0\u1680\u180e\u2000\u2001\u2002\u2003\u2004\u2005\u2006\u2007\u2008\u2009\u200a\u202f\u205f\u3000\t\u000b\f\u001c\u001d\u001e\u001f\n\r]+");
+com.google.android.gms.tagmanager.DataLayer.jimple:        $r3 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("(\\d+)\\s*([smhd]?)");
+com.google.android.gms.tagmanager.UniversalAnalyticsTag.jimple:        $r5 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("dimension(\\d+)");
+com.google.android.gms.tagmanager.UniversalAnalyticsTag.jimple:        $r5 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("metric(\\d+)");
+com.google.android.gsf.Gservices.jimple:        $r1 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String,int)>("^(1|true|t|on|yes|y)$", 2);
+com.google.android.gsf.Gservices.jimple:        $r1 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String,int)>("^(0|false|f|off|no|n)$", 2);
+com.google.android.libraries.phonenumbers.AsYouTypeFormatter.jimple:        $r1 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("\\[([^\\[\\]])*\\]");
+com.google.android.libraries.phonenumbers.AsYouTypeFormatter.jimple:        $r1 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("\\d(?=[^,}][^,}])");
+
+com.google.android.libraries.phonenumbers.AsYouTypeFormatter.jimple:        "[-x\u2010-\u2015\u2212\u30fc\uff0d-\uff0f \u00a0\u00ad\u200b\u2060\u3000()\uff08\uff09\uff3b\uff3d.\\[\\]/~\u2053\u223c\uff5e]*(\\$\\d[-x\u2010-\u2015\u2212\u30fc\uff0d-\uff0f \u00a0\u00ad\u200b\u2060\u3000()\uff08\uff09\uff3b\uff3d.\\[\\]/~\u2053\u223c\uff5e]*)+"
+
+com.google.android.libraries.phonenumbers.AsYouTypeFormatter.jimple:        $r1 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("[- ]");
+com.google.android.libraries.phonenumbers.AsYouTypeFormatter.jimple:        $r1 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("\u2008");
+com.google.android.libraries.phonenumbers.PhoneNumberUtil.jimple:        $r13 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("[\\d]+(?:[~\u2053\u223c\uff5e][\\d]+)?");
+com.google.android.libraries.phonenumbers.PhoneNumberUtil.jimple:        $r13 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("[+\uff0b]+");
+com.google.android.libraries.phonenumbers.PhoneNumberUtil.jimple:        $r13 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("[-x\u2010-\u2015\u2212\u30fc\uff0d-\uff0f \u00a0\u00ad\u200b\u2060\u3000()\uff08\uff09\uff3b\uff3d.\\[\\]/~\u2053\u223c\uff5e]+");
+com.google.android.libraries.phonenumbers.PhoneNumberUtil.jimple:        $r13 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("(\\p{Nd})");
+com.google.android.libraries.phonenumbers.PhoneNumberUtil.jimple:        $r13 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("[+\uff0b\\p{Nd}]");
+com.google.android.libraries.phonenumbers.PhoneNumberUtil.jimple:        $r13 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("[\\\\/] *x");
+com.google.android.libraries.phonenumbers.PhoneNumberUtil.jimple:        $r13 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("[[\\P{N}&&\\P{L}]&&[^#]]+$");
+
+com.google.android.libraries.phonenumbers.PhoneNumberUtil.jimple:        $r13 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("(?:.*?[A-Za-z]){3}.*");
+
+com.google.android.libraries.phonenumbers.PhoneNumberUtil.jimple:        $r13 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String,int)>($r4, 66);
+com.google.android.libraries.phonenumbers.PhoneNumberUtil.jimple:        $r13 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String,int)>($r4, 66);
+com.google.android.libraries.phonenumbers.PhoneNumberUtil.jimple:        $r13 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("(\\D+)");
+com.google.android.libraries.phonenumbers.PhoneNumberUtil.jimple:        $r13 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("(\\$\\d)");
+com.google.android.libraries.phonenumbers.PhoneNumberUtil.jimple:        $r13 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("\\$NP");
+com.google.android.libraries.phonenumbers.PhoneNumberUtil.jimple:        $r13 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("\\$FG");
+com.google.android.libraries.phonenumbers.PhoneNumberUtil.jimple:        $r13 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("\\$CC");
+com.google.android.libraries.phonenumbers.PhoneNumberUtil.jimple:        $r13 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("\\(?\\$1\\)?");
+com.google.common.email.EmailValidationUtil.jimple:        $r0 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("^[,\\s]+");
+com.google.common.email.EmailValidationUtil.jimple:        $r0 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("^<([^<>]+)>$");
+
+com.google.common.email.EmailValidationUtil.jimple:        $r0 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("^\\s*([^<]+)<([^<>]+)@([^<>@]+)>\\s*$");
+
+com.google.common.email.EmailValidationUtil.jimple:        $r0 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("^\\s*([^<>]+)@([^<>@]+)\\s*$");
+
+com.google.common.email.EmailValidationUtil.jimple:        $r0 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("^(?:[^\\(\\)\\\\]|\\\\.)+");
+com.google.photos.base.BaseImageUrlUtil.jimple:        $r2 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("^((http(s)?):)?\\/\\/((((lh[3-6](-tt|-d[a-g,z])?\\.((ggpht)|(googleusercontent)|(google)))|(([1-4]\\.bp\\.blogspot)|(bp[0-3]\\.blogger))|((((cp|ci|gp)[3-6])|(ap[1-2]))\\.(ggpht|googleusercontent))|(gm[1-4]\\.ggpht)|(((yt[3-4])|(sp[1-3]))\\.(ggpht|googleusercontent)))\\.com)|(dp[3-6]\\.googleusercontent\\.cn)|(lh[3-6]\\.(googleadsserving\\.cn|xn--9kr7l\\.com))|(photos\\-image\\-(dev|qa)(-auth)?\\.corp\\.google\\.com)|((dev|dev2|dev3|qa|qa2|qa3|qa-red|qa-blue|canary)[-.]lighthouse\\.sandbox\\.google\\.com\\/image)|(image\\-dev\\-lighthouse(-auth)?\\.sandbox\\.google\\.com(\\/image)?))\\/");
+com.squareup.okhttp.internal.DiskLruCache.jimple:        $r0 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("[a-z0-9_-]{1,120}");
+com.squareup.okhttp.internal.tls.OkHostnameVerifier.jimple:        $r0 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("([0-9a-fA-F]*:[0-9a-fA-F:.]*)|([\\d.]+)");
+com.squareup.okhttp.MediaType.jimple:        $r0 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("([a-zA-Z0-9-!#$%&\'*+.^_`{|}~]+)/([a-zA-Z0-9-!#$%&\'*+.^_`{|}~]+)");
+com.squareup.okhttp.MediaType.jimple:        $r0 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>(";\\s*(?:([a-zA-Z0-9-!#$%&\'*+.^_`{|}~]+)=(?:([a-zA-Z0-9-!#$%&\'*+.^_`{|}~]+)|\"([^\"]*)\"))?");
+
+
+
+
+com.google.android.apps.wallet.transfer.ContactAutocompleteLoaderCallbacks.jimple:        $z0 = virtualinvoke $r0.<java.lang.String: boolean matches(java.lang.String)>("[\\d\\+\\(\\) -]+");
+
+com.google.android.apps.wallet.webview.AuthUrls.jimple:        $z0 = virtualinvoke $r1.<java.lang.String: boolean matches(java.lang.String)>("accounts\\.google\\.[^\\.]*");
+com.google.android.apps.wallet.webview.AuthUrls.jimple:        $z0 = virtualinvoke $r1.<java.lang.String: boolean matches(java.lang.String)>("www\\.google\\.[^\\.]*");
+com.google.android.gms.tagmanager.PreviewManager.jimple:        $z1 = virtualinvoke $r2.<java.lang.String: boolean matches(java.lang.String)>("^tagmanager.c.\\S+:\\/\\/preview\\/p\\?id=\\S+&gtm_auth=\\S+&gtm_preview=\\d+(&gtm_debug=x)?$");
+com.google.android.gms.tagmanager.PreviewManager.jimple:        $z1 = virtualinvoke $r2.<java.lang.String: boolean matches(java.lang.String)>(".*?&gtm_debug=x$");
+com.google.android.gms.tagmanager.PreviewManager.jimple:        $z1 = virtualinvoke $r2.<java.lang.String: boolean matches(java.lang.String)>("^tagmanager.c.\\S+:\\/\\/preview\\/p\\?id=\\S+&gtm_preview=$");
+
+
+
+Instagram
+==============
+
+android.support.a.a.jimple:        $r1 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("(\\d+)\\.(\\d+)(\\.\\d+)?");
+ch.boye.httpclientandroidlib.conn.util.InetAddressUtils.jimple:        $r0 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("^(25[0-5]|2[0-4]\\d|[0-1]?\\d?\\d)(\\.(25[0-5]|2[0-4]\\d|[0-1]?\\d?\\d)){3}$");
+
+ch.boye.httpclientandroidlib.conn.util.InetAddressUtils.jimple:        $r0 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("^(?:[0-9a-fA-F]{1,4}:){7}[0-9a-fA-F]{1,4}$");
+
+ch.boye.httpclientandroidlib.conn.util.InetAddressUtils.jimple:        $r0 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("^((?:[0-9A-Fa-f]{1,4}(?::[0-9A-Fa-f]{1,4})*)?)::((?:[0-9A-Fa-f]{1,4}(?::[0-9A-Fa-f]{1,4})*)?)$");
+
+ch.boye.httpclientandroidlib.impl.client.cache.WarningValue.jimple:        $r0 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("(((\\p{Alnum}([\\p{Alnum}-]*\\p{Alnum})?\\.)*\\p{Alpha}([\\p{Alnum}-]*\\p{Alnum})?\\.?)|(\\d+\\.\\d+\\.\\d+\\.\\d+))(\\:\\d*)?");
+ch.boye.httpclientandroidlib.impl.client.cache.WarningValue.jimple:        $r0 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("\"(((Mon|Tue|Wed|Thu|Fri|Sat|Sun), (\\d{2} (Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) \\d{4}) (\\d{2}:\\d{2}:\\d{2}) GMT)|((Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday), (\\d{2}-(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)-\\d{2}) (\\d{2}:\\d{2}:\\d{2}) GMT)|((Mon|Tue|Wed|Thu|Fri|Sat|Sun) ((Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) ( |\\d)\\d) (\\d{2}:\\d{2}:\\d{2}) \\d{4}))\"");
+com.a.a.a.e.j.jimple:        $r0 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("[-_./;:]");
+com.coremedia.iso.j.jimple:        $r3 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("(.*)\\((.*?)\\)");
+com.facebook.android.maps.a.s.jimple:        $r1 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("[a-z0-9_-]{1,120}");
+com.facebook.common.b.b.jimple:        $r0 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("^[0-9]+L$");
+com.facebook.f.a.c.jimple:        $r0 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("([0-9a-fA-F]*:[0-9a-fA-F:.]*)|([\\d.]+)");
+com.facebook.g.p.jimple:        $r0 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("^\\d+-[a-zA-Z0-9_\\-]+-(\\d+)\\.(temp_stacktrace|stacktrace)$");
+com.facebook.n.e.jimple:        $r13 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("[\\d]+(?:[~\u2053\u223c\uff5e][\\d]+)?");
+com.facebook.n.e.jimple:        $r13 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("[+\uff0b]+");
+com.facebook.n.e.jimple:        $r13 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("[-x\u2010-\u2015\u2212\u30fc\uff0d-\uff0f \u00a0\u00ad\u200b\u2060\u3000()\uff08\uff09\uff3b\uff3d.\\[\\]/~\u2053\u223c\uff5e]+");
+com.facebook.n.e.jimple:        $r13 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("(\\p{Nd})");
+com.facebook.n.e.jimple:        $r13 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("[+\uff0b\\p{Nd}]");
+com.facebook.n.e.jimple:        $r13 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("[\\\\/] *x");
+com.facebook.n.e.jimple:        $r13 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("[[\\P{N}&&\\P{L}]&&[^#]]+$");
+
+com.facebook.n.e.jimple:        $r13 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("(?:.*?[A-Za-z]){3}.*");
+
+com.facebook.n.e.jimple:        $r13 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("(\\D+)");
+com.facebook.n.e.jimple:        $r13 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("(\\$\\d)");
+com.facebook.n.e.jimple:        $r13 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("\\$NP");
+com.facebook.n.e.jimple:        $r13 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("\\$FG");
+com.facebook.n.e.jimple:        $r13 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("\\$CC");
+com.facebook.n.e.jimple:        $r13 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("\\(?\\$1\\)?");
+com.googlecode.mp4parser.c.c.jimple:        $r1 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("(....|\\.\\.)(\\[(.*)\\])?");
+com.instagram.android.h.c.jimple:        $r0 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String,int)>("\\s+\\Z", 8);
+com.instagram.android.h.c.jimple:        $r0 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String,int)>("\\A\\s+", 8);
+com.instagram.common.c.i.jimple:        $r0 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("\\s+");
+
+com.instagram.common.c.i.jimple:        $r0 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String,int)>("(@[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)*)", 2);
+
+com.instagram.common.c.i.jimple:        $r0 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String,int)>("^([\\x{2712}\\x{2714}\\x{2716}\\x{271d}\\x{2721}\\x{2728}\\x{2733}\\x{2734}\\x{2744}\\x{2747}\\x{274c}\\x{274e}\\x{2753}-\\x{2755}\\x{2757}\\x{2763}\\x{2764}\\x{2795}-\\x{2797}\\x{27a1}\\x{27b0}\\x{27bf}\\x{2934}\\x{2935}\\x{2b05}-\\x{2b07}\\x{2b1b}\\x{2b1c}\\x{2b50}\\x{2b55}\\x{3030}\\x{303d}\\x{1f004}\\x{1f0cf}\\x{1f170}\\x{1f171}\\x{1f17e}\\x{1f17f}\\x{1f18e}\\x{1f191}-\\x{1f19a}\\x{1f201}\\x{1f202}\\x{1f21a}\\x{1f22f}\\x{1f232}-\\x{1f23a}\\x{1f250}\\x{1f251}\\x{1f300}-\\x{1f321}\\x{1f324}-\\x{1f393}\\x{1f396}\\x{1f397}\\x{1f399}-\\x{1f39b}\\x{1f39e}-\\x{1f3f0}\\x{1f3f3}-\\x{1f3f5}\\x{1f3f7}-\\x{1f4fd}\\x{1f4ff}-\\x{1f53d}\\x{1f549}-\\x{1f54e}\\x{1f550}-\\x{1f567}\\x{1f56f}\\x{1f570}\\x{1f573}-\\x{1f579}\\x{1f587}\\x{1f58a}-\\x{1f58d}\\x{1f590}\\x{1f595}\\x{1f596}\\x{1f5a5}\\x{1f5a8}\\x{1f5b1}\\x{1f5b2}\\x{1f5bc}\\x{1f5c2}-\\x{1f5c4}\\x{1f5d1}-\\x{1f5d3}\\x{1f5dc}-\\x{1f5de}\\x{1f5e1}\\x{1f5e3}\\x{1f5ef}\\x{1f5f3}\\x{1f5fa}-\\x{1f64f}\\x{1f680}-\\x{1f6c5}\\x{1f6cb}-\\x{1f6d0}\\x{1f6e0}-\\x{1f6e5}\\x{1f6e9}\\x{1f6eb}\\x{1f6ec}\\x{1f6f0}\\x{1f6f3}\\x{1f910}-\\x{1f918}\\x{1f980}-\\x{1f984}\\x{1f9c0}\\x{3297}\\x{3299}\\x{a9}\\x{ae}\\x{203c}\\x{2049}\\x{2122}\\x{2139}\\x{2194}-\\x{2199}\\x{21a9}\\x{21aa}\\x{231a}\\x{231b}\\x{2328}\\x{2388}\\x{23cf}\\x{23e9}-\\x{23f3}\\x{23f8}-\\x{23fa}\\x{24c2}\\x{25aa}\\x{25ab}\\x{25b6}\\x{25c0}\\x{25fb}-\\x{25fe}\\x{2600}-\\x{2604}\\x{260e}\\x{2611}\\x{2614}\\x{2615}\\x{2618}\\x{261d}\\x{2620}\\x{2622}\\x{2623}\\x{2626}\\x{262a}\\x{262e}\\x{262f}\\x{2638}-\\x{263a}\\x{2648}-\\x{2653}\\x{2660}\\x{2663}\\x{2665}\\x{2666}\\x{2668}\\x{267b}\\x{267f}\\x{2692}-\\x{2694}\\x{2696}\\x{2697}\\x{2699}\\x{269b}\\x{269c}\\x{26a0}\\x{26a1}\\x{26aa}\\x{26ab}\\x{26b0}\\x{26b1}\\x{26bd}\\x{26be}\\x{26c4}\\x{26c5}\\x{26c8}\\x{26ce}\\x{26cf}\\x{26d1}\\x{26d3}\\x{26d4}\\x{26e9}\\x{26ea}\\x{26f0}-\\x{26f5}\\x{26f7}-\\x{26fa}\\x{26fd}\\x{2702}\\x{2705}\\x{2708}-\\x{270d}\\x{270f}]|\\x{23}\\x{20e3}|\\x{2a}\\x{20e3}|\\x{30}\\x{20e3}|\\x{31}\\x{20e3}|\\x{32}\\x{20e3}|\\x{33}\\x{20e3}|\\x{34}\\x{20e3}|\\x{35}\\x{20e3}|\\x{36}\\x{20e3}|\\x{37}\\x{20e3}|\\x{38}\\x{20e3}|\\x{39}\\x{20e3}|\\x{1f1e6}[\\x{1f1e8}-\\x{1f1ec}\\x{1f1ee}\\x{1f1f1}\\x{1f1f2}\\x{1f1f4}\\x{1f1f6}-\\x{1f1fa}\\x{1f1fc}\\x{1f1fd}\\x{1f1ff}]|\\x{1f1e7}[\\x{1f1e6}\\x{1f1e7}\\x{1f1e9}-\\x{1f1ef}\\x{1f1f1}-\\x{1f1f4}\\x{1f1f6}-\\x{1f1f9}\\x{1f1fb}\\x{1f1fc}\\x{1f1fe}\\x{1f1ff}]|\\x{1f1e8}[\\x{1f1e6}\\x{1f1e8}\\x{1f1e9}\\x{1f1eb}-\\x{1f1ee}\\x{1f1f0}-\\x{1f1f5}\\x{1f1f7}\\x{1f1fa}-\\x{1f1ff}]|\\x{1f1e9}[\\x{1f1ea}\\x{1f1ec}\\x{1f1ef}\\x{1f1f0}\\x{1f1f2}\\x{1f1f4}\\x{1f1ff}]|\\x{1f1ea}[\\x{1f1e6}\\x{1f1e8}\\x{1f1ea}\\x{1f1ec}\\x{1f1ed}\\x{1f1f7}-\\x{1f1fa}]|\\x{1f1eb}[\\x{1f1ee}-\\x{1f1f0}\\x{1f1f2}\\x{1f1f4}\\x{1f1f7}]|\\x{1f1ec}[\\x{1f1e6}\\x{1f1e7}\\x{1f1e9}-\\x{1f1ee}\\x{1f1f1}-\\x{1f1f3}\\x{1f1f5}-\\x{1f1fa}\\x{1f1fc}\\x{1f1fe}]|\\x{1f1ed}[\\x{1f1f0}\\x{1f1f2}\\x{1f1f3}\\x{1f1f7}\\x{1f1f9}\\x{1f1fa}]|\\x{1f1ee}[\\x{1f1e8}-\\x{1f1ea}\\x{1f1f1}-\\x{1f1f4}\\x{1f1f6}-\\x{1f1f9}]|\\x{1f1ef}[\\x{1f1ea}\\x{1f1f2}\\x{1f1f4}\\x{1f1f5}]|\\x{1f1f0}[\\x{1f1ea}\\x{1f1ec}-\\x{1f1ee}\\x{1f1f2}\\x{1f1f3}\\x{1f1f5}\\x{1f1f7}\\x{1f1fc}\\x{1f1fe}\\x{1f1ff}]|\\x{1f1f1}[\\x{1f1e6}-\\x{1f1e8}\\x{1f1ee}\\x{1f1f0}\\x{1f1f7}-\\x{1f1fb}\\x{1f1fe}]|\\x{1f1f2}[\\x{1f1e6}\\x{1f1e8}-\\x{1f1ed}\\x{1f1f0}-\\x{1f1ff}]|\\x{1f1f3}[\\x{1f1e6}\\x{1f1e8}\\x{1f1ea}-\\x{1f1ec}\\x{1f1ee}\\x{1f1f1}\\x{1f1f4}\\x{1f1f5}\\x{1f1f7}\\x{1f1fa}\\x{1f1ff}]|\\x{1f1f4}\\x{1f1f2}|\\x{1f1f5}[\\x{1f1e6}\\x{1f1ea}-\\x{1f1ed}\\x{1f1f0}-\\x{1f1f3}\\x{1f1f7}-\\x{1f1f9}\\x{1f1fc}\\x{1f1fe}]|\\x{1f1f6}\\x{1f1e6}|\\x{1f1f7}[\\x{1f1ea}\\x{1f1f4}\\x{1f1f8}\\x{1f1fa}\\x{1f1fc}]|\\x{1f1f8}[\\x{1f1e6}-\\x{1f1ea}\\x{1f1ec}-\\x{1f1f4}\\x{1f1f7}-\\x{1f1f9}\\x{1f1fb}\\x{1f1fd}-\\x{1f1ff}]|\\x{1f1f9}[\\x{1f1e6}\\x{1f1e8}\\x{1f1e9}\\x{1f1eb}-\\x{1f1ed}\\x{1f1ef}-\\x{1f1f4}\\x{1f1f7}\\x{1f1f9}\\x{1f1fb}\\x{1f1fc}\\x{1f1ff}]|\\x{1f1fa}[\\x{1f1e6}\\x{1f1ec}\\x{1f1f2}\\x{1f1f8}\\x{1f1fe}\\x{1f1ff}]|\\x{1f1fb}[\\x{1f1e6}\\x{1f1e8}\\x{1f1ea}\\x{1f1ec}\\x{1f1ee}\\x{1f1f3}\\x{1f1fa}]|\\x{1f1fc}[\\x{1f1eb}\\x{1f1f8}]|\\x{1f1fd}\\x{1f1f0}|\\x{1f1fe}[\\x{1f1ea}\\x{1f1f9}]|\\x{1f1ff}[\\x{1f1e6}\\x{1f1f2}\\x{1f1fc}]|[\\x{fe00}-\\x{fe0f}\\x{200d}])+$", 66);
+com.instagram.common.c.i.jimple:        $r0 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String,int)>("^[\ud83c\udc04\ud83c\udd70\ud83c\udd71\ud83c\udd7e\ud83c\udd7f\ud83c\udd8e\ud83c\udd92\ud83c\udd94\ud83c\udd95\ud83c\udd97\ud83c\udd99\ud83c\udd9a\ud83c\udde7\ud83c\udde8\ud83c\udde9\ud83c\uddea\ud83c\uddea\ud83c\uddeb\ud83c\uddec\ud83c\uddee\ud83c\uddef\ud83c\uddf0\ud83c\uddf3\ud83c\uddf5\ud83c\uddf7\ud83c\uddf7\ud83c\uddf7\ud83c\uddf8\ud83c\uddf8\ud83c\uddf9\ud83c\uddfa\ud83c\uddfa\ud83c\ude01\ud83c\ude02\ud83c\ude1a\ud83c\ude2f\ud83c\ude33\ud83c\ude35\ud83c\ude36\ud83c\ude37\ud83c\ude38\ud83c\ude39\ud83c\ude3a\ud83c\ude50\ud83c\udf00\ud83c\udf02\ud83c\udf03\ud83c\udf04\ud83c\udf05\ud83c\udf06\ud83c\udf07\ud83c\udf08\ud83c\udf0a\ud83c\udf19\ud83c\udf1f\ud83c\udf34\ud83c\udf35\ud83c\udf37\ud83c\udf38\ud83c\udf39\ud83c\udf3a\ud83c\udf3b\ud83c\udf3e\ud83c\udf40\ud83c\udf41\ud83c\udf42\ud83c\udf43\ud83c\udf45\ud83c\udf46\ud83c\udf49\ud83c\udf4a\ud83c\udf4e\ud83c\udf53\ud83c\udf54\ud83c\udf58\ud83c\udf59\ud83c\udf5a\ud83c\udf5b\ud83c\udf5c\ud83c\udf5d\ud83c\udf5e\ud83c\udf5f\ud83c\udf61\ud83c\udf62\ud83c\udf63\ud83c\udf66\ud83c\udf67\ud83c\udf70\ud83c\udf71\ud83c\udf72\ud83c\udf73\ud83c\udf74\ud83c\udf75\ud83c\udf76\ud83c\udf78\ud83c\udf7a\ud83c\udf7b\ud83c\udf80\ud83c\udf81\ud83c\udf82\ud83c\udf83\ud83c\udf84\ud83c\udf85\ud83c\udf86\ud83c\udf87\ud83c\udf88\ud83c\udf89\ud83c\udf8c\ud83c\udf8d\ud83c\udf8e\ud83c\udf8f\ud83c\udf90\ud83c\udf91\ud83c\udf92\ud83c\udf93\ud83c\udfa1\ud83c\udfa2\ud83c\udfa4\ud83c\udfa5\ud83c\udfa6\ud83c\udfa7\ud83c\udfa8\ud83c\udfa9\ud83c\udfab\ud83c\udfac\ud83c\udfaf\ud83c\udfb0\ud83c\udfb1\ud83c\udfb5\ud83c\udfb6\ud83c\udfb7\ud83c\udfb8\ud83c\udfba\ud83c\udfbe\ud83c\udfbf\ud83c\udfc0\ud83c\udfc1\ud83c\udfc3\ud83c\udfc4\ud83c\udfc6\ud83c\udfc8\ud83c\udfca\ud83c\udfe0\ud83c\udfe2\ud83c\udfe3\ud83c\udfe5\ud83c\udfe6\ud83c\udfe7\ud83c\udfe8\ud83c\udfe9\ud83c\udfea\ud83c\udfeb\ud83c\udfec\ud83c\udfed\ud83c\udfef\ud83c\udff0\ud83d\udc0d\ud83d\udc0e\ud83d\udc11\ud83d\udc12\ud83d\udc14\ud83d\udc17\ud83d\udc18\ud83d\udc19\ud83d\udc1a\ud83d\udc1b\ud83d\udc1f\ud83d\udc20\ud83d\udc24\ud83d\udc26\ud83d\udc27\ud83d\udc28\ud83d\udc2b\ud83d\udc2c\ud83d\udc2d\ud83d\udc2e\ud83d\udc2f\ud83d\udc30\ud83d\udc31\ud83d\udc33\ud83d\udc34\ud83d\udc35\ud83d\udc36\ud83d\udc37\ud83d\udc38\ud83d\udc39\ud83d\udc3a\ud83d\udc3b\ud83d\udc40\ud83d\udc42\ud83d\udc43\ud83d\udc44\ud83d\udc46\ud83d\udc47\ud83d\udc48\ud83d\udc49\ud83d\udc4a\ud83d\udc4b\ud83d\udc4c\ud83d\udc4d\ud83d\udc4e\ud83d\udc4f\ud83d\udc50\ud83d\udc51\ud83d\udc52\ud83d\udc54\ud83d\udc55\ud83d\udc57\ud83d\udc58\ud83d\udc59\ud83d\udc5c\ud83d\udc5f\ud83d\udc60\ud83d\udc61\ud83d\udc62\ud83d\udc63\ud83d\udc66\ud83d\udc67\ud83d\udc68\ud83d\udc69\ud83d\udc6b\ud83d\udc6e\ud83d\udc6f\ud83d\udc71\ud83d\udc72\ud83d\udc73\ud83d\udc74\ud83d\udc75\ud83d\udc76\ud83d\udc77\ud83d\udc78\ud83d\udc7b\ud83d\udc7c\ud83d\udc7d\ud83d\udc7e\ud83d\udc7f\ud83d\udc80\ud83d\udc81\ud83d\udc82\ud83d\udc83\ud83d\udc84\ud83d\udc85\ud83d\udc86\ud83d\udc87\ud83d\udc88\ud83d\udc89\ud83d\udc8a\ud83d\udc8b\ud83d\udc8d\ud83d\udc8e\ud83d\udc8f\ud83d\udc90\ud83d\udc91\ud83d\udc92\ud83d\udc93\ud83d\udc94\ud83d\udc97\ud83d\udc98\ud83d\udc99\ud83d\udc9a\ud83d\udc9b\ud83d\udc9c\ud83d\udc9d\ud83d\udc9f\ud83d\udca1\ud83d\udca2\ud83d\udca3\ud83d\udca4\ud83d\udca6\ud83d\udca8\ud83d\udca9\ud83d\udcaa\ud83d\udcb0\ud83d\udcb1\ud83d\udcb1\ud83d\udcb9\ud83d\udcb9\ud83d\udcba\ud83d\udcbb\ud83d\udcbc\ud83d\udcbd\ud83d\udcbf\ud83d\udcc0\ud83d\udcd6\ud83d\udcdd\ud83d\udce0\ud83d\udce1\ud83d\udce2\ud83d\udce3\ud83d\udce9\ud83d\udceb\ud83d\udcee\ud83d\udcf1\ud83d\udcf2\ud83d\udcf3\ud83d\udcf4\ud83d\udcf6\ud83d\udcf7\ud83d\udcfa\ud83d\udcfb\ud83d\udcfc\ud83d\udd0a\ud83d\udd0d\ud83d\udd11\ud83d\udd12\ud83d\udd13\ud83d\udd14\ud83d\udd1d\ud83d\udd1e\ud83d\udd25\ud83d\udd28\ud83d\udd2b\ud83d\udd2f\ud83d\udd30\ud83d\udd31\ud83d\udd32\ud83d\udd33\ud83d\udd34\ud83d\udd50\ud83d\udd51\ud83d\udd52\ud83d\udd53\ud83d\udd54\ud83d\udd55\ud83d\udd56\ud83d\udd57\ud83d\udd58\ud83d\udd59\ud83d\udd5a\ud83d\udd5b\ud83d\uddfb\ud83d\uddfc\ud83d\uddfd\ud83d\ude01\ud83d\ude02\ud83d\ude03\ud83d\ude04\ud83d\ude09\ud83d\ude0a\ud83d\ude0c\ud83d\ude0d\ud83d\ude0f\ud83d\ude12\ud83d\ude13\ud83d\ude14\ud83d\ude16\ud83d\ude18\ud83d\ude1a\ud83d\ude1c\ud83d\ude1d\ud83d\ude1e\ud83d\ude20\ud83d\ude21\ud83d\ude22\ud83d\ude23\ud83d\ude25\ud83d\ude28\ud83d\ude2a\ud83d\ude2d\ud83d\ude30\ud83d\ude31\ud83d\ude32\ud83d\ude33\ud83d\ude37\ud83d\ude45\ud83d\ude46\ud83d\ude47\ud83d\ude4c\ud83d\ude4f\ud83d\ude80\ud83d\ude83\ud83d\ude84\ud83d\ude85\ud83d\ude87\ud83d\ude89\ud83d\ude8c\ud83d\ude8f\ud83d\ude91\ud83d\ude92\ud83d\ude93\ud83d\ude95\ud83d\ude97\ud83d\ude99\ud83d\ude9a\ud83d\udea2\ud83d\udea4\ud83d\udea5\ud83d\udea7\ud83d\udeac\ud83d\udead\ud83d\udeb2\ud83d\udeb6\ud83d\udeb9\ud83d\udeba\ud83d\udebb\ud83d\udebc\ud83d\udebd\ud83d\udebe\ud83d\udec0\u263a\u2728\u2755\u2754\u270a\u270c\u270b\u261d\u2600\u2614\u2601\u26c4\u26a1\u2615\u303d\u2666\u2663\u2660\u26f3\u26be\u26bd\u27bf\u260e\u2702\u26ea\u26fa\u26f5\u26f2\u2668\u26a0\u26fd\u20e3\u20e3\u20e3\u20e3\u20e3\u20e3\u20e3\u2b05\u2b07\u2b06\u20e3\u20e3\u20e3\u20e3\u27a1\u2197\u2196\u2198\u2199\u25c0\u25b6\u23ea\u23e9\u267f\u2733\u3297\u3299\u2734\u2648\u2649\u264a\u264b\u264c\u264d\u264e\u26ce\u2653\u2652\u2651\u2650\u264f\u274c\u2b55]+$", 66);
+com.instagram.common.k.a.b.jimple:        $r2 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("[a-z0-9_-]{1,120}");
+com.instagram.creation.photo.gallery.b.jimple:        $r0 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("(.*)/\\d+");
+
+com.instagram.debug.memorydump.MemoryDumpFileManager.jimple:        $r0 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("dump_([0-9]*_[^_]*)\\.hprof.*");
+
+com.instagram.m.a.a.jimple:        $r0 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String,int)>("(#(\\w|[\\x{2712}\\x{2714}\\x{2716}\\x{271d}\\x{2721}\\x{2728}\\x{2733}\\x{2734}\\x{2744}\\x{2747}\\x{274c}\\x{274e}\\x{2753}-\\x{2755}\\x{2757}\\x{2763}\\x{2764}\\x{2795}-\\x{2797}\\x{27a1}\\x{27b0}\\x{27bf}\\x{2934}\\x{2935}\\x{2b05}-\\x{2b07}\\x{2b1b}\\x{2b1c}\\x{2b50}\\x{2b55}\\x{3030}\\x{303d}\\x{1f004}\\x{1f0cf}\\x{1f170}\\x{1f171}\\x{1f17e}\\x{1f17f}\\x{1f18e}\\x{1f191}-\\x{1f19a}\\x{1f201}\\x{1f202}\\x{1f21a}\\x{1f22f}\\x{1f232}-\\x{1f23a}\\x{1f250}\\x{1f251}\\x{1f300}-\\x{1f321}\\x{1f324}-\\x{1f393}\\x{1f396}\\x{1f397}\\x{1f399}-\\x{1f39b}\\x{1f39e}-\\x{1f3f0}\\x{1f3f3}-\\x{1f3f5}\\x{1f3f7}-\\x{1f4fd}\\x{1f4ff}-\\x{1f53d}\\x{1f549}-\\x{1f54e}\\x{1f550}-\\x{1f567}\\x{1f56f}\\x{1f570}\\x{1f573}-\\x{1f579}\\x{1f587}\\x{1f58a}-\\x{1f58d}\\x{1f590}\\x{1f595}\\x{1f596}\\x{1f5a5}\\x{1f5a8}\\x{1f5b1}\\x{1f5b2}\\x{1f5bc}\\x{1f5c2}-\\x{1f5c4}\\x{1f5d1}-\\x{1f5d3}\\x{1f5dc}-\\x{1f5de}\\x{1f5e1}\\x{1f5e3}\\x{1f5ef}\\x{1f5f3}\\x{1f5fa}-\\x{1f64f}\\x{1f680}-\\x{1f6c5}\\x{1f6cb}-\\x{1f6d0}\\x{1f6e0}-\\x{1f6e5}\\x{1f6e9}\\x{1f6eb}\\x{1f6ec}\\x{1f6f0}\\x{1f6f3}\\x{1f910}-\\x{1f918}\\x{1f980}-\\x{1f984}\\x{1f9c0}\\x{3297}\\x{3299}\\x{a9}\\x{ae}\\x{203c}\\x{2049}\\x{2122}\\x{2139}\\x{2194}-\\x{2199}\\x{21a9}\\x{21aa}\\x{231a}\\x{231b}\\x{2328}\\x{2388}\\x{23cf}\\x{23e9}-\\x{23f3}\\x{23f8}-\\x{23fa}\\x{24c2}\\x{25aa}\\x{25ab}\\x{25b6}\\x{25c0}\\x{25fb}-\\x{25fe}\\x{2600}-\\x{2604}\\x{260e}\\x{2611}\\x{2614}\\x{2615}\\x{2618}\\x{261d}\\x{2620}\\x{2622}\\x{2623}\\x{2626}\\x{262a}\\x{262e}\\x{262f}\\x{2638}-\\x{263a}\\x{2648}-\\x{2653}\\x{2660}\\x{2663}\\x{2665}\\x{2666}\\x{2668}\\x{267b}\\x{267f}\\x{2692}-\\x{2694}\\x{2696}\\x{2697}\\x{2699}\\x{269b}\\x{269c}\\x{26a0}\\x{26a1}\\x{26aa}\\x{26ab}\\x{26b0}\\x{26b1}\\x{26bd}\\x{26be}\\x{26c4}\\x{26c5}\\x{26c8}\\x{26ce}\\x{26cf}\\x{26d1}\\x{26d3}\\x{26d4}\\x{26e9}\\x{26ea}\\x{26f0}-\\x{26f5}\\x{26f7}-\\x{26fa}\\x{26fd}\\x{2702}\\x{2705}\\x{2708}-\\x{270d}\\x{270f}]|\\x{23}\\x{20e3}|\\x{2a}\\x{20e3}|\\x{30}\\x{20e3}|\\x{31}\\x{20e3}|\\x{32}\\x{20e3}|\\x{33}\\x{20e3}|\\x{34}\\x{20e3}|\\x{35}\\x{20e3}|\\x{36}\\x{20e3}|\\x{37}\\x{20e3}|\\x{38}\\x{20e3}|\\x{39}\\x{20e3}|\\x{1f1e6}[\\x{1f1e8}-\\x{1f1ec}\\x{1f1ee}\\x{1f1f1}\\x{1f1f2}\\x{1f1f4}\\x{1f1f6}-\\x{1f1fa}\\x{1f1fc}\\x{1f1fd}\\x{1f1ff}]|\\x{1f1e7}[\\x{1f1e6}\\x{1f1e7}\\x{1f1e9}-\\x{1f1ef}\\x{1f1f1}-\\x{1f1f4}\\x{1f1f6}-\\x{1f1f9}\\x{1f1fb}\\x{1f1fc}\\x{1f1fe}\\x{1f1ff}]|\\x{1f1e8}[\\x{1f1e6}\\x{1f1e8}\\x{1f1e9}\\x{1f1eb}-\\x{1f1ee}\\x{1f1f0}-\\x{1f1f5}\\x{1f1f7}\\x{1f1fa}-\\x{1f1ff}]|\\x{1f1e9}[\\x{1f1ea}\\x{1f1ec}\\x{1f1ef}\\x{1f1f0}\\x{1f1f2}\\x{1f1f4}\\x{1f1ff}]|\\x{1f1ea}[\\x{1f1e6}\\x{1f1e8}\\x{1f1ea}\\x{1f1ec}\\x{1f1ed}\\x{1f1f7}-\\x{1f1fa}]|\\x{1f1eb}[\\x{1f1ee}-\\x{1f1f0}\\x{1f1f2}\\x{1f1f4}\\x{1f1f7}]|\\x{1f1ec}[\\x{1f1e6}\\x{1f1e7}\\x{1f1e9}-\\x{1f1ee}\\x{1f1f1}-\\x{1f1f3}\\x{1f1f5}-\\x{1f1fa}\\x{1f1fc}\\x{1f1fe}]|\\x{1f1ed}[\\x{1f1f0}\\x{1f1f2}\\x{1f1f3}\\x{1f1f7}\\x{1f1f9}\\x{1f1fa}]|\\x{1f1ee}[\\x{1f1e8}-\\x{1f1ea}\\x{1f1f1}-\\x{1f1f4}\\x{1f1f6}-\\x{1f1f9}]|\\x{1f1ef}[\\x{1f1ea}\\x{1f1f2}\\x{1f1f4}\\x{1f1f5}]|\\x{1f1f0}[\\x{1f1ea}\\x{1f1ec}-\\x{1f1ee}\\x{1f1f2}\\x{1f1f3}\\x{1f1f5}\\x{1f1f7}\\x{1f1fc}\\x{1f1fe}\\x{1f1ff}]|\\x{1f1f1}[\\x{1f1e6}-\\x{1f1e8}\\x{1f1ee}\\x{1f1f0}\\x{1f1f7}-\\x{1f1fb}\\x{1f1fe}]|\\x{1f1f2}[\\x{1f1e6}\\x{1f1e8}-\\x{1f1ed}\\x{1f1f0}-\\x{1f1ff}]|\\x{1f1f3}[\\x{1f1e6}\\x{1f1e8}\\x{1f1ea}-\\x{1f1ec}\\x{1f1ee}\\x{1f1f1}\\x{1f1f4}\\x{1f1f5}\\x{1f1f7}\\x{1f1fa}\\x{1f1ff}]|\\x{1f1f4}\\x{1f1f2}|\\x{1f1f5}[\\x{1f1e6}\\x{1f1ea}-\\x{1f1ed}\\x{1f1f0}-\\x{1f1f3}\\x{1f1f7}-\\x{1f1f9}\\x{1f1fc}\\x{1f1fe}]|\\x{1f1f6}\\x{1f1e6}|\\x{1f1f7}[\\x{1f1ea}\\x{1f1f4}\\x{1f1f8}\\x{1f1fa}\\x{1f1fc}]|\\x{1f1f8}[\\x{1f1e6}-\\x{1f1ea}\\x{1f1ec}-\\x{1f1f4}\\x{1f1f7}-\\x{1f1f9}\\x{1f1fb}\\x{1f1fd}-\\x{1f1ff}]|\\x{1f1f9}[\\x{1f1e6}\\x{1f1e8}\\x{1f1e9}\\x{1f1eb}-\\x{1f1ed}\\x{1f1ef}-\\x{1f1f4}\\x{1f1f7}\\x{1f1f9}\\x{1f1fb}\\x{1f1fc}\\x{1f1ff}]|\\x{1f1fa}[\\x{1f1e6}\\x{1f1ec}\\x{1f1f2}\\x{1f1f8}\\x{1f1fe}\\x{1f1ff}]|\\x{1f1fb}[\\x{1f1e6}\\x{1f1e8}\\x{1f1ea}\\x{1f1ec}\\x{1f1ee}\\x{1f1f3}\\x{1f1fa}]|\\x{1f1fc}[\\x{1f1eb}\\x{1f1f8}]|\\x{1f1fd}\\x{1f1f0}|\\x{1f1fe}[\\x{1f1ea}\\x{1f1f9}]|\\x{1f1ff}[\\x{1f1e6}\\x{1f1f2}\\x{1f1fc}]|[\\x{fe00}-\\x{fe0f}\\x{200d}])+)", 66);
+com.instagram.m.a.a.jimple:        $r0 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String,int)>("(#(\\w|[\ud83c\udc04\ud83c\udd70\ud83c\udd71\ud83c\udd7e\ud83c\udd7f\ud83c\udd8e\ud83c\udd92\ud83c\udd94\ud83c\udd95\ud83c\udd97\ud83c\udd99\ud83c\udd9a\ud83c\udde7\ud83c\udde8\ud83c\udde9\ud83c\uddea\ud83c\uddea\ud83c\uddeb\ud83c\uddec\ud83c\uddee\ud83c\uddef\ud83c\uddf0\ud83c\uddf3\ud83c\uddf5\ud83c\uddf7\ud83c\uddf7\ud83c\uddf7\ud83c\uddf8\ud83c\uddf8\ud83c\uddf9\ud83c\uddfa\ud83c\uddfa\ud83c\ude01\ud83c\ude02\ud83c\ude1a\ud83c\ude2f\ud83c\ude33\ud83c\ude35\ud83c\ude36\ud83c\ude37\ud83c\ude38\ud83c\ude39\ud83c\ude3a\ud83c\ude50\ud83c\udf00\ud83c\udf02\ud83c\udf03\ud83c\udf04\ud83c\udf05\ud83c\udf06\ud83c\udf07\ud83c\udf08\ud83c\udf0a\ud83c\udf19\ud83c\udf1f\ud83c\udf34\ud83c\udf35\ud83c\udf37\ud83c\udf38\ud83c\udf39\ud83c\udf3a\ud83c\udf3b\ud83c\udf3e\ud83c\udf40\ud83c\udf41\ud83c\udf42\ud83c\udf43\ud83c\udf45\ud83c\udf46\ud83c\udf49\ud83c\udf4a\ud83c\udf4e\ud83c\udf53\ud83c\udf54\ud83c\udf58\ud83c\udf59\ud83c\udf5a\ud83c\udf5b\ud83c\udf5c\ud83c\udf5d\ud83c\udf5e\ud83c\udf5f\ud83c\udf61\ud83c\udf62\ud83c\udf63\ud83c\udf66\ud83c\udf67\ud83c\udf70\ud83c\udf71\ud83c\udf72\ud83c\udf73\ud83c\udf74\ud83c\udf75\ud83c\udf76\ud83c\udf78\ud83c\udf7a\ud83c\udf7b\ud83c\udf80\ud83c\udf81\ud83c\udf82\ud83c\udf83\ud83c\udf84\ud83c\udf85\ud83c\udf86\ud83c\udf87\ud83c\udf88\ud83c\udf89\ud83c\udf8c\ud83c\udf8d\ud83c\udf8e\ud83c\udf8f\ud83c\udf90\ud83c\udf91\ud83c\udf92\ud83c\udf93\ud83c\udfa1\ud83c\udfa2\ud83c\udfa4\ud83c\udfa5\ud83c\udfa6\ud83c\udfa7\ud83c\udfa8\ud83c\udfa9\ud83c\udfab\ud83c\udfac\ud83c\udfaf\ud83c\udfb0\ud83c\udfb1\ud83c\udfb5\ud83c\udfb6\ud83c\udfb7\ud83c\udfb8\ud83c\udfba\ud83c\udfbe\ud83c\udfbf\ud83c\udfc0\ud83c\udfc1\ud83c\udfc3\ud83c\udfc4\ud83c\udfc6\ud83c\udfc8\ud83c\udfca\ud83c\udfe0\ud83c\udfe2\ud83c\udfe3\ud83c\udfe5\ud83c\udfe6\ud83c\udfe7\ud83c\udfe8\ud83c\udfe9\ud83c\udfea\ud83c\udfeb\ud83c\udfec\ud83c\udfed\ud83c\udfef\ud83c\udff0\ud83d\udc0d\ud83d\udc0e\ud83d\udc11\ud83d\udc12\ud83d\udc14\ud83d\udc17\ud83d\udc18\ud83d\udc19\ud83d\udc1a\ud83d\udc1b\ud83d\udc1f\ud83d\udc20\ud83d\udc24\ud83d\udc26\ud83d\udc27\ud83d\udc28\ud83d\udc2b\ud83d\udc2c\ud83d\udc2d\ud83d\udc2e\ud83d\udc2f\ud83d\udc30\ud83d\udc31\ud83d\udc33\ud83d\udc34\ud83d\udc35\ud83d\udc36\ud83d\udc37\ud83d\udc38\ud83d\udc39\ud83d\udc3a\ud83d\udc3b\ud83d\udc40\ud83d\udc42\ud83d\udc43\ud83d\udc44\ud83d\udc46\ud83d\udc47\ud83d\udc48\ud83d\udc49\ud83d\udc4a\ud83d\udc4b\ud83d\udc4c\ud83d\udc4d\ud83d\udc4e\ud83d\udc4f\ud83d\udc50\ud83d\udc51\ud83d\udc52\ud83d\udc54\ud83d\udc55\ud83d\udc57\ud83d\udc58\ud83d\udc59\ud83d\udc5c\ud83d\udc5f\ud83d\udc60\ud83d\udc61\ud83d\udc62\ud83d\udc63\ud83d\udc66\ud83d\udc67\ud83d\udc68\ud83d\udc69\ud83d\udc6b\ud83d\udc6e\ud83d\udc6f\ud83d\udc71\ud83d\udc72\ud83d\udc73\ud83d\udc74\ud83d\udc75\ud83d\udc76\ud83d\udc77\ud83d\udc78\ud83d\udc7b\ud83d\udc7c\ud83d\udc7d\ud83d\udc7e\ud83d\udc7f\ud83d\udc80\ud83d\udc81\ud83d\udc82\ud83d\udc83\ud83d\udc84\ud83d\udc85\ud83d\udc86\ud83d\udc87\ud83d\udc88\ud83d\udc89\ud83d\udc8a\ud83d\udc8b\ud83d\udc8d\ud83d\udc8e\ud83d\udc8f\ud83d\udc90\ud83d\udc91\ud83d\udc92\ud83d\udc93\ud83d\udc94\ud83d\udc97\ud83d\udc98\ud83d\udc99\ud83d\udc9a\ud83d\udc9b\ud83d\udc9c\ud83d\udc9d\ud83d\udc9f\ud83d\udca1\ud83d\udca2\ud83d\udca3\ud83d\udca4\ud83d\udca6\ud83d\udca8\ud83d\udca9\ud83d\udcaa\ud83d\udcb0\ud83d\udcb1\ud83d\udcb1\ud83d\udcb9\ud83d\udcb9\ud83d\udcba\ud83d\udcbb\ud83d\udcbc\ud83d\udcbd\ud83d\udcbf\ud83d\udcc0\ud83d\udcd6\ud83d\udcdd\ud83d\udce0\ud83d\udce1\ud83d\udce2\ud83d\udce3\ud83d\udce9\ud83d\udceb\ud83d\udcee\ud83d\udcf1\ud83d\udcf2\ud83d\udcf3\ud83d\udcf4\ud83d\udcf6\ud83d\udcf7\ud83d\udcfa\ud83d\udcfb\ud83d\udcfc\ud83d\udd0a\ud83d\udd0d\ud83d\udd11\ud83d\udd12\ud83d\udd13\ud83d\udd14\ud83d\udd1d\ud83d\udd1e\ud83d\udd25\ud83d\udd28\ud83d\udd2b\ud83d\udd2f\ud83d\udd30\ud83d\udd31\ud83d\udd32\ud83d\udd33\ud83d\udd34\ud83d\udd50\ud83d\udd51\ud83d\udd52\ud83d\udd53\ud83d\udd54\ud83d\udd55\ud83d\udd56\ud83d\udd57\ud83d\udd58\ud83d\udd59\ud83d\udd5a\ud83d\udd5b\ud83d\uddfb\ud83d\uddfc\ud83d\uddfd\ud83d\ude01\ud83d\ude02\ud83d\ude03\ud83d\ude04\ud83d\ude09\ud83d\ude0a\ud83d\ude0c\ud83d\ude0d\ud83d\ude0f\ud83d\ude12\ud83d\ude13\ud83d\ude14\ud83d\ude16\ud83d\ude18\ud83d\ude1a\ud83d\ude1c\ud83d\ude1d\ud83d\ude1e\ud83d\ude20\ud83d\ude21\ud83d\ude22\ud83d\ude23\ud83d\ude25\ud83d\ude28\ud83d\ude2a\ud83d\ude2d\ud83d\ude30\ud83d\ude31\ud83d\ude32\ud83d\ude33\ud83d\ude37\ud83d\ude45\ud83d\ude46\ud83d\ude47\ud83d\ude4c\ud83d\ude4f\ud83d\ude80\ud83d\ude83\ud83d\ude84\ud83d\ude85\ud83d\ude87\ud83d\ude89\ud83d\ude8c\ud83d\ude8f\ud83d\ude91\ud83d\ude92\ud83d\ude93\ud83d\ude95\ud83d\ude97\ud83d\ude99\ud83d\ude9a\ud83d\udea2\ud83d\udea4\ud83d\udea5\ud83d\udea7\ud83d\udeac\ud83d\udead\ud83d\udeb2\ud83d\udeb6\ud83d\udeb9\ud83d\udeba\ud83d\udebb\ud83d\udebc\ud83d\udebd\ud83d\udebe\ud83d\udec0\u263a\u2728\u2755\u2754\u270a\u270c\u270b\u261d\u2600\u2614\u2601\u26c4\u26a1\u2615\u303d\u2666\u2663\u2660\u26f3\u26be\u26bd\u27bf\u260e\u2702\u26ea\u26fa\u26f5\u26f2\u2668\u26a0\u26fd\u20e3\u20e3\u20e3\u20e3\u20e3\u20e3\u20e3\u2b05\u2b07\u2b06\u20e3\u20e3\u20e3\u20e3\u27a1\u2197\u2196\u2198\u2199\u25c0\u25b6\u23ea\u23e9\u267f\u2733\u3297\u3299\u2734\u2648\u2649\u264a\u264b\u264c\u264d\u264e\u26ce\u2653\u2652\u2651\u2650\u264f\u274c\u2b55])+)", 66);
+
+com.instagram.s.b.jimple:        $r0 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("com\\.htc\\.software\\.Sense(\\d+(?:\\.\\d+)?).*");
+
+org.chromium.base.SysUtils.jimple:        $r0 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("^MemTotal:\\s+([0-9]+) kB$");
+org.chromium.net.CronetEngine$Builder.jimple:        $r0 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("^[0-9\\.]*$");
+
+
+com.b.a.a.a.a.a.jimple:        ".*[0-9A-Za-z].*"
+
+com.facebook.rti.b.f.d.jimple:        $z0 = virtualinvoke $r4.<java.lang.String: boolean matches(java.lang.String)>("([01][01])*");
+com.instagram.android.fragment.a.jimple:        $z0 = virtualinvoke $r2.<java.lang.String: boolean matches(java.lang.String)>("instagram://hide/\\?reason=.*");
+com.instagram.android.fragment.ce.jimple:        $z0 = virtualinvoke $r4.<java.lang.String: boolean matches(java.lang.String)>("^https?://.+");
+com.instagram.creation.a.e.jimple:        $z0 = virtualinvoke $r2.<java.lang.String: boolean matches(java.lang.String)>("cpu[0-9]+");
+
+
+
