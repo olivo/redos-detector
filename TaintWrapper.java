@@ -17,6 +17,8 @@ class TaintWrapper extends AbstractTaintWrapper {
 
     private final EasyTaintWrapper easyTaintWrapper;
 
+    private final RegexAnalyzer regexAnalyzer;
+
     public TaintWrapper(String easyTaintWrapperFilename){
 	EasyTaintWrapper etw = null;
 	try{
@@ -25,6 +27,7 @@ class TaintWrapper extends AbstractTaintWrapper {
 	    System.out.println("ERROR: Could not create taint wrapper from file: " + easyTaintWrapperFilename);
 	}
 	this.easyTaintWrapper = etw;
+	this.regexAnalyzer = new RegexAnalyzer();
     }
 
     private boolean anyTainted(AccessPath taintedPath, List<Value> values){

@@ -6,6 +6,19 @@ com.amazon.device.crashmanager.CrashDescriptorUtil.jimple:        "([a-zA-Z0-9_\
 
 com.amazon.mShop.net.CookieBridge.jimple:        ".*(\\.amazon\\..*)"
 
+Microsoft Outlook
+
+"^[0-9a-zA-Z_]+[0-9a-zA-Z _-]*$"
+
+Musical
+
+"^[0-9a-zA-Z_]+[0-9a-zA-Z _-]*$"
+
+Netflix
+"^[0-9]*[.]?[0-9]*%$"
+
+OfferUp
+"^[0-9a-zA-Z_]+[0-9a-zA-Z _-]*$"
 
 Pinterest 
 
@@ -17,6 +30,8 @@ com.paypal.android.sdk.ce.jimple:        "^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A
 
 com.pinterest.activity.contacts.InviterManager$ScoredInvitabilityContact$Builder.jimple:       "([^\\+]*).*@(.*)(\\..*)"
 
+Slither
+"^[0-9a-zA-Z_]+[0-9a-zA-Z _-]*$"
 
 Venmo
 
@@ -45,3 +60,6 @@ org.chromium.chrome.browser.externalnav.ExternalNavigationHandler.jimple:       
 Instagram
 
 com.b.a.a.a.a.a.jimple:        ".*[0-9A-Za-z].*"
+
+
+

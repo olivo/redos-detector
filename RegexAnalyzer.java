@@ -1,7 +1,11 @@
 import java.util.HashMap;
 class RegexAnalyzer {
 
-    HashMap<String, Boolean> cache = new HashMap<String, Boolean>();
+    HashMap<String, Boolean> cache;
+
+    public RegexAnalyzer() {
+	this.cache = new HashMap<String, Boolean>();
+    }
 
     public boolean isEvilRegex(String regex){
 	if(cache.containsKey(regex)){
