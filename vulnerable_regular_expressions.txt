@@ -6,9 +6,6 @@ benchmarks/Android_Open_Source/FredJul.Flym.txt
 benchmarks/Android_Open_Source/google.iosched.txt
 "__w-((?:-?\\d+)+)__"
 
-benchmarks/Android_Open_Source/zeapo.Android-Password-Store.txt
-"(.+)@([\\w\\d\\.]+):([\\d]+)*(.*)"  (RXXR)
-
 benchmarks/Java/aviolette.foodtrucklocator.txt
 "https?:\\/\\/([-\\w\\.]+)+(:\\d+)?(\\/([\\w/_\\.]*(\\?\\S+)?)?)?"  (RXXR)
 
