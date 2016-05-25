@@ -13,7 +13,6 @@ benchmarks/Java/Cweili.html-compressor.txt
 "(?:\\p{Blank}*(\\r?\\n)\\p{Blank}*)+"
 
 benchmarks/Java/find-sec-bugs.find-sec-bugs.txt
-"((a)?)+"  (RXXR)
 "(a|a?)+"  (RXXR)
 "(a+)+"
 "([a-zA-Z]+)*"
