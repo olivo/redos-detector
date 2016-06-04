@@ -63,3 +63,10 @@ com.b.a.a.a.a.a.jimple:        ".*[0-9A-Za-z].*"
 
 
 
+deezer.weslang.txt:"[-_.0-9A-Za-z]{1,64}@[-_0-9A-Za-z]{1,255}[-_.0-9A-Za-z]{1,255}"
+
+benchmarks/Java/deezer.weslang.txt:"https?://[-_.?&~;+=/#0-9A-Za-z]{1,2076}|[-_.0-9A-Za-z]{1,64}@[-_0-9A-Za-z]{1,255}[-_.0-9A-Za-z]{1,255}|[ ]{2,}"
+
+benchmarks/Java/deezer.weslang.txt~:"[-_.0-9A-Za-z]{1,64}@[-_0-9A-Za-z]{1,255}[-_.0-9A-Za-z]{1,255}"
+
+benchmarks/Java/deezer.weslang.txt~:"https?://[-_.?&~;+=/#0-9A-Za-z]{1,2076}|[-_.0-9A-Za-z]{1,64}@[-_0-9A-Za-z]{1,255}[-_.0-9A-Za-z]{1,255}|[ ]{2,}"
