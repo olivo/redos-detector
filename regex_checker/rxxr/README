@@ -1,0 +1,7 @@
++ code/
+  - source code for RXXR
++ data/
+  - input data-sets (Snort, RegexLib) and RXXR outputs for those regexes
+  - scripts for validating the vulnerabilities discovered above
++ utils/
+  - scripts used to scrape regexes from Snort and RegexLib
