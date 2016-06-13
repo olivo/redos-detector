@@ -55,19 +55,18 @@ class TaintWrapper extends AbstractTaintWrapper {
 	// Propagating custom taint over the receiving object
 	// of a call to put with a tainted value.
 	if(method.getSignature().equals("<java.util.regex.Pattern: java.util.regex.Matcher matcher(java.lang.CharSequence)>")){
-		System.out.println("FOUND SINK!");
-	}
-	/*
-	if(method.getSignature().equals("<java.util.EnumMap: java.lang.Object put(java.lang.Enum,java.lang.Object)>")){
+	    // Get the regular expression string from the matcher.
 	    InvokeExpr invokeExpr = stmt.getInvokeExpr();
 	    InstanceInvokeExpr instanceInvokeExpr = (InstanceInvokeExpr)invokeExpr;
-	    Value base = instanceInvokeExpr.getBase();
 	    List<Value> args = instanceInvokeExpr.getArgs();
-	    if(anyTainted(taintedPath, args)){
-	       taints.add(AccessPathFactory.v().createAccessPath(base, true));
+	    if(args.size() > 0){
+		String regex = args.get(0).toString();
+		// Check if the regular expression is evil.
+		if(this.regexAnalyzer.isEvilRegex(regex)){
+		    System.out.println("Potential REDoS vulnerability found: " + stmt);
+		}
 	    }
 	}
-	*/
 
 	return taints;
     }
