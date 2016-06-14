@@ -63,7 +63,7 @@ class TaintWrapper extends AbstractTaintWrapper {
 		String regex = args.get(0).toString();
 		// Check if the regular expression is evil.
 		if(this.regexAnalyzer.isEvilRegex(regex)){
-		    System.out.println("Potential REDoS vulnerability found: " + stmt);
+		    System.out.println("VULNERABILITY: Potential REDoS vulnerability found: " + stmt);
 		}
 	    }
 	}
