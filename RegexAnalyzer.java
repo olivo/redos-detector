@@ -49,7 +49,7 @@ class RegexAnalyzer {
 	// Call the RXXR regular expression checker.
 	try {
 	    Runtime rt = Runtime.getRuntime();
-	    Process pr = rt.exec("./regex_checker/rxxr/code/scan.bin -i regex.txt");
+	    Process pr = rt.exec("./regex_checker/rxxr/code/scan.bin -i regex.txt > regex_out.txt");
 	} catch(IOException e){
 	    System.out.println("Could not run the RXXR regex checker.");
 	    return false;
