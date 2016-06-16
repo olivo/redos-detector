@@ -1,5 +1,6 @@
 import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.lang.Process;
@@ -50,6 +51,9 @@ class RegexAnalyzer {
 	try {
 	    Runtime rt = Runtime.getRuntime();
 	    Process pr = rt.exec("./regex_checker/rxxr/code/scan.bin -i regex.txt > regex_out.txt");
+	    // Read the output of RXXR.
+	    File outFile = new File("regex_out.txt");
+	    FileReader fr = new FileReader(outFile);
 	} catch(IOException e){
 	    System.out.println("Could not run the RXXR regex checker.");
 	    return false;
