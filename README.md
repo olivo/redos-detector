@@ -4,3 +4,9 @@ A tool for detecting regular expression denial-of-service vulnerabilities in And
 # Dependencies
 The tool requires a regular expression analyzer.
 Currently, the RXXR checker is included.
+
+# Compilation
+./compile.sh
+
+# Execution
+./run.sh <apk_file>
