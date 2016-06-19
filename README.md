@@ -9,4 +9,4 @@ Currently, the RXXR checker is included.
 ./compile.sh
 
 # Execution
-./run.sh <apk_file>
+./run.sh \<apk_file\>
