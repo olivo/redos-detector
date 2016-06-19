@@ -11,11 +11,13 @@ import java.util.HashMap;
 class RegexAnalyzer {
 
     HashMap<String, Boolean> cache;
-    final String outputFilename;
+    final String regexFilename;
+    final String resultFilename;
 
     public RegexAnalyzer() {
 	this.cache = new HashMap<String, Boolean>();
-	this.outputFilename =  "regex.txt";
+	this.regexFilename =  "regex.txt";
+	this.resultFilename =  "result.txt";
     }
 
     // Main method for checking whether a regular expression
@@ -27,13 +29,13 @@ class RegexAnalyzer {
 	}
 	// Call the RXXR regex checker for new regular expressions.
 	// The interaction is handled through files.
-	File file = new File(this.outputFilename);
+	File file = new File(this.regexFilename);
 	try {
 	    if(!file.exists()){
 		file.createNewFile();
 	    }
 	} catch(IOException e){
-	    System.out.println("Could not create file: " + outputFilename);
+	    System.out.println("Could not create file: " + regexFilename);
 	    return false;
 	}
 	
@@ -44,16 +46,16 @@ class RegexAnalyzer {
 	    bw.write(regex);
 	    bw.close();
 	} catch(IOException e){
-	    System.out.println("Could not write to file: " + outputFilename);
+	    System.out.println("Could not write to file: " + regexFilename);
 	    return false;
 	}
 
 	// Call the RXXR regular expression checker.
 	try {
 	    Runtime rt = Runtime.getRuntime();
-	    Process pr = rt.exec("./regex_checker/rxxr/code/scan.bin -i regex.txt > regex_out.txt");
+	    Process pr = rt.exec("./regex_checker/rxxr/code/scan.bin -i regex.txt > " + resultFilename);
 	    // Read the output of RXXR.
-	    File outFile = new File("regex_out.txt");
+	    File outFile = new File(resultFilename);
 	    FileReader fr = new FileReader(outFile);
 	    BufferedReader br = new BufferedReader(fr);
 	    String line;
