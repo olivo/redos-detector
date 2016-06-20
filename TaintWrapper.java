@@ -55,6 +55,7 @@ class TaintWrapper extends AbstractTaintWrapper {
 	// Propagating custom taint over the receiving object
 	// of a call to put with a tainted value.
 	if(method.getSignature().equals("<java.util.regex.Pattern: java.util.regex.Matcher matcher(java.lang.CharSequence)>")){
+	    System.out.println("SINK: " + stmt);
 	    // Get the regular expression string from the matcher.
 	    InvokeExpr invokeExpr = stmt.getInvokeExpr();
 	    InstanceInvokeExpr instanceInvokeExpr = (InstanceInvokeExpr)invokeExpr;
