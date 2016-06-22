@@ -59,16 +59,12 @@ class TaintWrapper extends AbstractTaintWrapper {
 	    // Get the regular expression string from the matcher.
 	    InvokeExpr invokeExpr = stmt.getInvokeExpr();
 	    InstanceInvokeExpr instanceInvokeExpr = (InstanceInvokeExpr)invokeExpr;
-	    List<Value> args = instanceInvokeExpr.getArgs();
-	    if(args.size() > 0){
-		String regex = args.get(0).toString();
-		// Check if the regular expression is evil.
-		if(this.regexAnalyzer.isEvilRegex(regex)){
+	    String regex = getRegex(instanceInvokeExpr);
+	    // Check if the regular expression is evil.
+	    if(this.regexAnalyzer.isEvilRegex(regex)){
 		    System.out.println("VULNERABILITY: Potential REDoS vulnerability found: " + stmt);
-		}
 	    }
 	}
-
 	return taints;
     }
 
@@ -85,5 +81,14 @@ class TaintWrapper extends AbstractTaintWrapper {
     @Override
     public boolean supportsCallee(Stmt callSite){
 	return true;
+    }
+
+    public String getRegex(InstanceInvokeExpr instanceInvokeExpr){
+	List<Value> args = instanceInvokeExpr.getArgs();
+	String regex = "";
+	if(args.size() > 0){
+	     regex = args.get(0).toString();
+	}
+	return regex;
     }
 }
